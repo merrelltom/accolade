@@ -1,9 +1,0 @@
-Title: Which of these people do you know socially?
-
-----
-
-Question-type: false
-
-----
-
-Answers: 

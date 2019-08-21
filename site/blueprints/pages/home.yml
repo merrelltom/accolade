@@ -10,4 +10,11 @@ icon: 🏠
 options:
   status: false
 
-
+columns:
+  - width: 2/3
+    sections:
+      screens: 
+        type: pages
+        headline: Screens
+        template: screen
+        empty: No screens yet

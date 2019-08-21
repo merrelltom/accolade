@@ -1,158 +1,4 @@
-/*  
-================================================================
-TEXTURE BUTTONS
-================================================================  
-*/
-.l-btn-wrap{
-	width:100%;
-	height:46px;
-	position: relative;
-	overflow: hidden;
-}
 
-.l-btn-wrap svg{
-	min-width:100%;
-	min-height: 100%;
-	position: absolute;
-	top:0;
-	left: 0;
-	z-index: 1;
-}
-
-.l-btn, a.l-btn{
-	position: absolute;
-	top:0;left:0;
-	width:100%;
-	display:block;
-	height:46px;
-	text-transform:uppercase;
-	text-align: right;
-	padding: 25px 5px 5px;
-	color:$black;
-	font-size:14px;
-	font-family: "Champion Heavywt A", "Champion Heavywt B";
-	font-style: normal;
-	font-weight: 400;
-	z-index: 2;
-	cursor: pointer;
-}
-
-.l-button:hover, a.l-buttonL:hover{
-	cursor:pointer;
-	color:$black;
-}
-
-
-.black-btn{
-	.l-btn, a.l-btn{
-		color:$orange;
-	}
-} 
-
-.black-btn:hover{
-	svg .a{
-		 fill: $white;
-		 transition: fill 200ms;
-	}
-}
-
-.white-btn{
-	.l-btn, a.l-btn{
-		color:$black;
-	}
-	svg .a{
-	 fill: $white;
-	 transition: fill 200ms;
-	}
-} 
-
-.white-btn:hover{
-	a{
-		opacity: 1;
-	}
-	svg .a{
-	 fill: $orange;
-	 transition: fill 200ms;
-	}
-} 
-
-.orange-btn{
-	.l-btn, a.l-btn{
-		color:$black;
-	}
-	svg .a{
-		 fill: $orange;
-		 transition: fill 200ms;
-	}
-} 
-
-.orange-btn:hover{
-	a{
-		opacity: 1;
-	}
-	svg .a{
-		 fill: $white;
-		 transition: fill 200ms;
-	}
-}
-
-
-/*  
-================================================================
-SLIDE BUTTONS
-================================================================  
-*/
-
-a.slide-button, a.slide-button:visited{
-	display: inline-block;
-	width:auto;
-	padding: 6px 6px 4px;
-	background:$black;
-	font-family: "Champion Heavywt A", "Champion Heavywt B";
-	font-style: normal;
-	font-weight: 400;
-	color: $white;
-}
-
-a.slide-button:hover, a.slide-button:active{
-	opacity: 1;
-	color: $orange;
-}
-
-/*  
-================================================================
-SMALL BUTTONS
-================================================================  
-*/
-
-.small-button, a.small-button{
-	display: inline-block;
-	width:auto;
-	padding: 2px 4px 1px;
-	background:$black;
-	font-family: "Champion Heavywt A", "Champion Heavywt B";
-	font-style: normal;
-	font-weight: 400;
-	font-size:12px;
-	border: 1px solid $white;
-	color: $white;
-}
-
-.small-button:hover, a.small-button:hover{
-	color: $orange;
-	border-color: $orange;
-	opacity:1;
-}
-
-.bg-orange{
-	.small-button, a.small-button{
-		color: $orange;
-		border-color: $black;
-	}
-	.small-button:hover, a.small-button:hover{
-			background:$white;
-	}
-}
 
 
 /*  
@@ -170,8 +16,14 @@ input.submit{
 	border:none;
 }
 
-.input{
-	font-family: "Knockout 30 A", "Knockout 30 B";
+.answers .input-wrapper, .input-wrapper{
+	border: 1px solid black;
+	width:100%;
+	padding:0;
+}
+
+input[type="text"]{
+	font-family: 'typ';
 	font-size: 100%;
 	margin: 0;
 	line-height: 1;
@@ -182,32 +34,33 @@ input.submit{
 	font-weight: normal;
 	border-radius: 0px;
 	left: auto;
-	color: $white;
-	background-color: transparent;
-	border: 1px solid $white;
-	display: inline-block;
+	color: black;
+	border: 0px;
+	display: block;
 	background-image: none;
 	box-shadow: none;
 	text-shadow: none;
 	outline: none;
-	padding:5px 5px 4px;
+	padding:14px 15px 10px;
+	height:60px;
+	width:100%
 }
 
 .input::placeholder {
-    color:$white;
+    color:#ccc;
 }
 
 .mailing-list-section .input{
 	width:100%;
-	border-color: $black;
-	color: $black;
+	border-color: black;
+	color: black;
 	height:46px;
 	padding:0 5px 0;
 	line-height: 46px;
 }
 
 .mailing-list-section::placeholder {
-    color:$black;
+    color:#9B9B9B;
 }
 
 
@@ -222,6 +75,7 @@ CHECKBOXES
     display: block;
     position: relative;
     padding-left: 32px;
+    padding-top:1px;
     cursor: pointer;
     line-height:22px;
     -webkit-user-select: none;
@@ -248,18 +102,18 @@ CHECKBOXES
     left: 0;
     height: 22px;
     width: 22px;
-    border:1px solid $white;
+    border:1px solid black;
     border-radius:50%;
 }
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-    background-color: $orange;
+    /*background-color: #99FDDF;*/
 }
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-    background-color: $orange;
+    background-color: #99FDDF;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */

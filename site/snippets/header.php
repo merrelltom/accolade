@@ -13,13 +13,3 @@
 </head>
 <body>
 
-  <div class="page">
-    
-    <header class="header">
-      <div class="wrapper">
-        <div class="row">
-          <h1><a class="logo" href="<?= $page->url() ?>"><?= $page->title() ?></a></h1>
-        </div>
-      </div>
-    </header>
-

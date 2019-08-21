@@ -4,62 +4,73 @@ LAYOUT
 ================================================================  
 */
 
-body{
-    min-height:100vh;
-    display:flex;
-    flex-flow: column;
+.screen{
+    padding:0px;
+    border-top:1px solid tomato;
     width:100vw;
-    overflow-x: hidden;
-    transition: background-color 400ms;
-    background-color: #fafafa;
+    min-height:100vh;
+    max-width:768px;
+    flex-direction: column;
+    display: flex;
+    margin-bottom:2em;
 }
 
-a, *{
-  transition: color 400ms;
-}
-
-a{
-   transition: color 400ms;
-}
-
-.page-content{
+.screen-content{
+    padding: 60px 90px 40px;
     flex: 1;
-    padding-top:100px;
 }
 
-.page {
-  padding: 5vh 0vw 10vh;
+.screen-title{
+    min-height: 144px;
+    padding-bottom: 2rem;
 }
 
+.subtitle{
+    padding: 20px 0 20px;
+}
 
-/*  
-================================================================
-IMAGE GRID
-================================================================  
-*/
-
-.grid-item{
-    padding-bottom:$flexboxgrid-gutter-width * .5;
-    padding-top: $flexboxgrid-gutter-width * .5;
-    .grid-item-inner{
-        width:100%;
-        padding: 0 0 100%;
-        background-color: darkgrey;
-        position: relative;
+.answers{
+    border-top: 2px solid black;
+    padding-bottom: 3em;
+    p{
+        padding:20px 0px 0px;
     }
-    figure{
-        position: absolute;
-        top:0;
-        width:100%;
-        height:100%;
+    li{
+        border-bottom: 1px solid #DCDCDC; 
+        padding: 20px 0 20px;
+    }
+    li:last-child{
+        border-bottom:none;
     }
 }
 
-.selected{
-    border: 1px solid green;
+.no-border{
+    border-top: 0px;
 }
 
-.ui-sortable-placeholder, .ui-sortable-helper{
-    background:red;
-    border:1px solid pink;
+
+.buttons{
+    width:100%;
+    bottom: 0;
+    border-top:2px solid black;
+}
+
+a.button{
+    display: inline-block;
+    width:50%;
+    height:112px;
+    line-height: 112px;
+    text-align: center;
+    font-weight: bold;
+    color:black;
+    text-decoration: none;
+}
+
+.next{
+    float:right;
+    border-left: 2px solid black;
+}
+
+.prev{
+    float: left;
 }

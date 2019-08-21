@@ -1,6 +1,21 @@
 @import "../base/variables";
 
 
+
+ 
+@font-face {
+  font-family: 'typ';
+  /*src: url('fonts/typ1451-regular.eot');*/
+  src: url('fonts/TMed.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'typ-b';
+  /*src: url('fonts/Typ1451-Bold.eot');*/
+  src: url('fonts/T-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
 /*  
 ================================================================
 FONTS
@@ -8,13 +23,12 @@ FONTS
 */
 
 body{
-  font-family: Arial;
+  font-family: 'typ';
   font-style: normal;
   font-weight: 400;
-  font-size:16px;
-  line-height: 19px;
-  background: $black;
-  color: $white;
+  font-size:20px;
+  color: black;
+  line-height:1.2;
 }
  
 em, b, strong{
@@ -68,12 +82,10 @@ HEADINGS
 
 h1, h2, h3, h4, h5, h6{
   margin:0;
-  padding-bottom: .5em;
   font-size: 1em;
-  font-family: Arial;
+  font-family: 'typ';
   font-style: normal;
-  font-weight: 400;
-  text-transform: uppercase;
+  font-weight: bold;
   a, a:link, a:visited{
   color: black;
   text-decoration: none;
@@ -86,9 +98,20 @@ a:hover, a:active{
   }
 }
 
+.main-title{
+  font-size:72px;
+}
+
 .uppercase{
   text-transform: uppercase;
 }
+
+
+.large-text{
+  font-size:28px;
+}
+
+
 
 /*  
 ================================================================
@@ -134,21 +157,5 @@ STYLES
 ================================================================  
 */
 
-
-/*  
-================================================================
-LISTS
-================================================================  
-*/
-
-
-ul.lined{
-  border-top:1px solid black;
-  margin-bottom: 10px;
-  li{
-    padding:5px 0 5px;
-    border-bottom:1px solid black;
-  }
-}
 
 

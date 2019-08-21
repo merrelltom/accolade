@@ -1,0 +1,16 @@
+Title: How likely are you to disagree with your parents on a major issue?
+
+----
+
+Question-type: false
+
+----
+
+Answers:
+
+-
+  answer_label: Very unlikely
+  answer_value: -10
+
+----
+

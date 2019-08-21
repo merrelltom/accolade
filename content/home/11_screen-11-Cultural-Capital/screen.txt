@@ -1,0 +1,25 @@
+Title: screen-11 Cultural Capital
+
+----
+
+Subtitle: 
+
+----
+
+Groups:
+
+- 
+  group_questions:
+    - >
+      home/screen-11-Cultural-Capital/WhichoftheseculturalactivitiesdoyoutakepartinSelectalloftheactivitiesyoudosometimesoroften
+    - >
+      home/screen-11-Cultural-Capital/Doyouhaveanestablishedsupportnetworkoffriendsandfamilylivingnearyou
+  questions_to_ask: 1
+
+----
+
+Questions-to-ask: 1
+
+----
+
+Description: 

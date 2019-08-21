@@ -1,0 +1,16 @@
+Title: I have a lackadaisical approach to things
+
+----
+
+Question-type: false
+
+----
+
+Answers:
+
+-
+  answer_label: Very inaccurate
+  answer_value: 10
+
+----
+

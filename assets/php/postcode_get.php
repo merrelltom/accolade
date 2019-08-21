@@ -1,7 +1,9 @@
 <?php
 
+
 //$postcode = $_POST["postcode"];
-$postcode = 'N167TP';
+$postcode =  isset($_POST['postcode']) ? $_POST['postcode'] : '';
+//$postcode = 'RG74UU';
 
 if ( strlen($postcode) < 7  && strlen($postcode) > 0 ) {
   $postcode = substr($postcode, 0, -3) . ' ' . substr($postcode, -3);

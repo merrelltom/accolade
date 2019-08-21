@@ -7,7 +7,6 @@
 
   <title><?= $site->title() ?> | <?= $page->title() ?></title>
 
-  <?= css(['assets/css/index.css', '@auto']) ?>
   <?= css(['assets/css/style-1.0.css', '@auto']) ?>
 
 </head>

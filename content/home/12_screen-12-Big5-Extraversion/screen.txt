@@ -1,0 +1,132 @@
+Title: screen-12 Big5 Extraversion
+
+----
+
+Subtitle: How accurately do the following statements describe you?
+
+----
+
+Groups:
+
+- 
+  group_questions:
+    - >
+      home/screen-12-Big5-Extraversion/Iamquietaroundstrangers
+    - >
+      home/screen-12-Big5-Extraversion/Iamthelifeoftheparty
+    - >
+      home/screen-12-Big5-Extraversion/Ikeepinthebackground
+    - >
+      home/screen-12-Big5-Extraversion/Ifeelcomfortablearoundpeople
+    - >
+      home/screen-12-Big5-Extraversion/Italktoalotofdifferentpeopleatparties
+    - >
+      home/screen-12-Big5-Extraversion/Idonttalkalot
+    - >
+      home/screen-12-Big5-Extraversion/Istartconversations
+    - >
+      home/screen-12-Big5-Extraversion/Idontliketodrawattentiontomyself
+    - >
+      home/screen-12-Big5-Extraversion/Idontmindbeingthecentreofattention
+    - >
+      home/screen-12-Big5-Extraversion/Ihavelittletosay
+    - >
+      home/screen-12-Big5-Extraversion/Ifeellittleconcernforothers
+    - >
+      home/screen-12-Big5-Extraversion/Iamnotinterestedinotherpeoplesproblems
+    - >
+      home/screen-12-Big5-Extraversion/Iamnotreallyinterestedinothers
+    - >
+      home/screen-12-Big5-Extraversion/Isympathisewithothersfeelings
+    - >
+      home/screen-12-Big5-Extraversion/Iaminterestedinpeople
+    - >
+      home/screen-12-Big5-Extraversion/Ifeelothersemotions
+    - >
+      home/screen-12-Big5-Extraversion/Igiveupcommitmentsofmyowntomaketimeforfriends
+    - >
+      home/screen-12-Big5-Extraversion/Original-Itaketimeoutforothers
+    - >
+      home/screen-12-Big5-Extraversion/Ihaveasoftheart
+    - >
+      home/screen-12-Big5-Extraversion/Iinsultpeople
+    - >
+      home/screen-12-Big5-Extraversion/Imakepeoplefeelatease
+  questions_to_ask: 3
+- 
+  group_questions:
+    - >
+      home/screen-12-Big5-Extraversion/Ihavefrequentmoodswings
+    - >
+      home/screen-12-Big5-Extraversion/Ichangemymoodalot
+    - >
+      home/screen-12-Big5-Extraversion/Iworryaboutthings
+    - >
+      home/screen-12-Big5-Extraversion/Irarelyfeelblue
+    - >
+      home/screen-12-Big5-Extraversion/Ioftenfeelblue
+    - >
+      home/screen-12-Big5-Extraversion/Iameasilydisturbed
+    - >
+      home/screen-12-Big5-Extraversion/Igetirritatedeasily
+    - >
+      home/screen-12-Big5-Extraversion/Igetupseteasily
+    - >
+      home/screen-12-Big5-Extraversion/Igetstressedeasily
+    - >
+      home/screen-12-Big5-Extraversion/Iamrelaxedmostofthetime
+    - >
+      home/screen-12-Big5-Extraversion/Ispendtimereflectingonthings
+    - >
+      home/screen-12-Big5-Extraversion/Idonothaveagoodimagination
+    - >
+      home/screen-12-Big5-Extraversion/Iamfullofideas
+    - >
+      home/screen-12-Big5-Extraversion/Ihaveexcellentideas
+    - >
+      home/screen-12-Big5-Extraversion/Ihaveavividimagination
+    - >
+      home/screen-12-Big5-Extraversion/Ihavearichvocabulary
+    - >
+      home/screen-12-Big5-Extraversion/Iusedifficultwords
+    - >
+      home/screen-12-Big5-Extraversion/Iamnotinterestedinabstractideas
+    - >
+      home/screen-12-Big5-Extraversion/Iamquicktounderstandthings
+    - >
+      home/screen-12-Big5-Extraversion/Ihavedifficultyunderstandingabstractideas
+    - >
+      home/screen-12-Big5-Extraversion/Igetimportanttasksdonerightaway
+    - >
+      home/screen-12-Big5-Extraversion/OriginalIgetchoresdonerightaway
+    - >
+      home/screen-12-Big5-Extraversion/Ileavemybelongingsaround
+    - >
+      home/screen-12-Big5-Extraversion/Ioftenforgettoputthingsbackintheirproperplace
+    - >
+      home/screen-12-Big5-Extraversion/Ifollowaschedule
+    - >
+      home/screen-12-Big5-Extraversion/Ilikeorder
+    - >
+      home/screen-12-Big5-Extraversion/Ihavealackadaisicalapproachtothings
+    - >
+      home/screen-12-Big5-Extraversion/OriginalIshirkmyduties
+    - >
+      home/screen-12-Big5-Extraversion/Imakemistakesinmywork
+    - >
+      home/screen-12-Big5-Extraversion/Original-Imakeamessofthings
+    - >
+      home/screen-12-Big5-Extraversion/Iamexactinginmywork
+    - >
+      home/screen-12-Big5-Extraversion/Iamalwaysprepared
+    - >
+      home/screen-12-Big5-Extraversion/Ipayattentiontodetails
+  questions_to_ask: 2
+
+----
+
+Questions-to-ask: 1
+
+----
+
+Description: 

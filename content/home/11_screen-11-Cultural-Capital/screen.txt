@@ -2,19 +2,11 @@ Title: screen-11 Cultural Capital
 
 ----
 
-Subtitle: 
+Subtitle: Which of these cultural activities do you take part in? Select all of the activities you do sometimes or often.
 
 ----
 
-Groups:
-
-- 
-  group_questions:
-    - >
-      home/screen-11-Cultural-Capital/WhichoftheseculturalactivitiesdoyoutakepartinSelectalloftheactivitiesyoudosometimesoroften
-    - >
-      home/screen-11-Cultural-Capital/Doyouhaveanestablishedsupportnetworkoffriendsandfamilylivingnearyou
-  questions_to_ask: 1
+Groups: 
 
 ----
 

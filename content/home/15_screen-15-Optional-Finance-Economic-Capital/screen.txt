@@ -2,7 +2,11 @@ Title: screen-15 Optional Finance Economic Capital
 
 ----
 
-Subtitle:
+Subtitle: Would you like your income or financial situation to be taken into account?
+
+----
+
+Groups: 
 
 ----
 

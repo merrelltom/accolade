@@ -11,8 +11,14 @@ LAYOUT
     min-height:100vh;
     max-width:768px;
     flex-direction: column;
+    display:none;
+}
+
+.selected{
     display: flex;
-    margin-bottom:2em;
+    opacity: 1;
+    left:0;
+    transition: all 400ms ease-in-out;
 }
 
 .screen-content{

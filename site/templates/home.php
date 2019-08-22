@@ -38,12 +38,14 @@
   <?php //// Post Code Screen //// ?>
 
   <section id="postcode-screen" class="screen postcode-screen">
-    
     <div class="screen-content">
       <h2 class="screen-title large-text">What is your postcode?</h2>
       <ul class="answers no-border">
         <li class="input-wrapper">
-          <input type="text" class="postcode" placeholder="Enter your postcode..." name="postcode">
+        <form method="POST">
+        <input type="text" id="postcode" class="postcode" placeholder="Enter your postcode...">
+        </form>
+        <button type=button onclick="postcode_func()"/>Check Postcode</button>
         </li>
         <hr>
         <li class="answer">
@@ -54,12 +56,28 @@
         </li> 
       </ul>
     </div>
-
     <div class="buttons">
       <a class="prev button">Previous</a>
       <a class="next button">Next</a>
     </div>
-
+   
+    <script>
+        function postcode_func(){
+            var x = document.getElementById("postcode").value;
+            console.log(x);
+            $.ajax({
+                type: "POST",
+                url: "assets/php/postcode_get.php",
+                dataType: 'json',
+                data: {postcode: x},
+                success: function (data) {
+                  console.log(data);
+                }
+            });
+            return false;
+        }
+    </script>
+      
   </section>
 
 

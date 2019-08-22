@@ -45,7 +45,7 @@
         <input type="text" id="postcode" class="postcode" placeholder="Enter your postcode...">
 
         </li>
-        <button type=button onclick="postcode_func()"/>Check Postcode</button>
+        <button id="pc_check" type="button"/>Check Postcode</button>
         <hr>
         <li class="answer">
           <label class="container">Not applicable / rather not say

@@ -52,7 +52,7 @@ $(document).ready(function() {
 		}
 
 		// If validated proceed to next
-
+		if(validation == true){
 			$(this).closest('.screen').removeClass('selected');
 			next.addClass('selected');
 			$(document).scrollTop(0);
@@ -64,7 +64,10 @@ $(document).ready(function() {
 
 	tm_body.on('click', '.prev', function(){
 		var next = $(this).closest('.screen').prev('.screen');
-
+		$(this).closest('.screen').removeClass('selected');
+		next.addClass('selected');	
+		$(document).scrollTop(0)
+	});
 
 	tm_body.on('click', '.submit', function(){
 		$('input:checked').each(function(){
@@ -76,25 +79,27 @@ $(document).ready(function() {
         });  
 		$('#results-screen').show();
 	});
-        
-        tm_body.on('click', '#pc_check', function(){
-            var x = document.getElementById("postcode").value;
-            //console.log(x);
-            $.ajax({
-                type: "POST",
-                url: "assets/php/postcode_get.php",
-                dataType: 'json',
-                data: {postcode: x},
-                success: function (data) {
-                    if (Number.isInteger(data)) {
-                        console.log(data); }
-                    }, 
-                error: function () {
-                        console.log('Postcode not found...');
-                    }
-            });
-            return false;
-        });
+
+
+    tm_body.on('click', '#pc_check', function(){
+	    var x = document.getElementById("postcode").value;
+	    //console.log(x);
+	    $.ajax({
+	        type: "POST",
+	        url: "assets/php/postcode_get.php",
+	        dataType: 'json',
+	        data: {postcode: x},
+	        success: function (data) {
+	            if (Number.isInteger(data)) {
+	                console.log(data); }
+	            }, 
+	        error: function () {
+	                console.log('Postcode not found...');
+	            }
+	    });
+	    return false;
+	});
+
 
 	/*  
 	================================================================

@@ -2,6 +2,8 @@
 
 if (isset($_POST['postcode'])) {
     
+    $values = array(-15, 0, -10, -5, 0, 5, 20, 0);
+    
     $postcode = filter_input(INPUT_POST, "postcode", FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
     //$postcode =  isset($_POST['postcode']) ? $_POST['postcode'] : '';
 
@@ -23,7 +25,7 @@ if (isset($_POST['postcode'])) {
     $val = $result->fetchArray(SQLITE3_ASSOC);
 
     if (array_key_exists('SPRGRP', $val)) {
-      echo($val['SPRGRP']);
+      echo($values[$val['SPRGRP']]);
     } else {
       echo(-99);
     }

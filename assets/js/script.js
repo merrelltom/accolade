@@ -81,7 +81,7 @@ $(document).ready(function() {
 	});
 
 
-    tm_body.on('click', '#pc_check', function(){
+        tm_body.on('click', '#pc_check', function(){
 	    var x = document.getElementById("postcode").value;
 	    //console.log(x);
 	    $.ajax({

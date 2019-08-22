@@ -13,7 +13,7 @@
 <?php foreach($question->answers()->toStructure() as $answer): ?>
     <li class="answer">
 		<label class="container"><?= $answer->answer_label();?>
-		  <input name="<?= $question->slug();?>" value="<?= $answer->answer_value();?>" type="<?= $type; ?>">
+		  <input name="<?= $question->title();?>" value="<?= $answer->answer_value();?>" type="<?= $type; ?>">
 		  <span class="checkmark"></span>
 		</label>
 	</li>	

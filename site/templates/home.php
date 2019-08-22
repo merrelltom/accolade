@@ -43,7 +43,7 @@
       <ul class="answers no-border">
         <li class="input-wrapper">
         <input type="text" id="postcode" class="postcode" placeholder="Enter your postcode...">
-
+        <input id="pc_result" type="checkbox" name="postcode result" value="0" class="invisible" checked>
         </li>
         <button id="pc_check" type="button"/>Check Postcode</button>
         <hr>

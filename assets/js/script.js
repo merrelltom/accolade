@@ -2,7 +2,11 @@
 var tm_body = jQuery( 'body' );
 var validation = false;
 var errorMessage = 'Please enter an answer for all questions';
-var score = [];
+var score = 0;
+var question_vals = {};
+var price = 100;
+var modifier = 1;
+
 
 $(document).ready(function() {
 
@@ -56,7 +60,13 @@ $(document).ready(function() {
 			$(this).closest('.screen').removeClass('selected');
 			next.addClass('selected');
 			$(document).scrollTop(0);
-
+                        var running_total = 0;
+                        $('input:checked').each(function () {
+                            if ($.isNumeric($(this).val())) {
+                                running_total += parseInt($(this).val());
+                            }
+                        });
+                        console.log("Running total:" + running_total);
 		}
 
 	});
@@ -70,14 +80,23 @@ $(document).ready(function() {
 	});
 
 	tm_body.on('click', '.submit', function(){
+                var total
 		$('input:checked').each(function(){
-			score.push($(this).val());
+//			score.push($(this).val());
+                        if ( $.isNumeric($(this).val()) ) {
+                            score += parseInt($(this).val());
+                        }
 		});
+                
 		var x = $("#accolade-pricing-form").serializeArray();  
-        $.each(x, function(i, field){  
-            $("#results-list").append("<li>" + field.name + ": " + field.value + "</li>");  
-        });  
-		$('#results-screen').show();
+                $.each(x, function(i, field){  
+                    $("#results-list").append("<li>" + field.name + ": " + field.value + "</li>");  
+                });
+                $("#results-list").append("<li>SCORE: " + score + "</li>");
+                var result = gen_result(price, modifier, score);
+                $("#results-list").append("<li>FUNCTION: "+price+" *(1 + "+modifier+"/100) ^ "+score+"  =  "+result+"</li>");
+                
+                $('#results-screen').show();
 	});
 
 
@@ -91,11 +110,11 @@ $(document).ready(function() {
 	        data: {postcode: x},
 	        success: function (data) {
 	            if (Number.isInteger(data)) {
-	                console.log(data); }
-	            }, 
-	        error: function () {
-	                console.log('Postcode not found...');
-	            }
+	                if (data != -99) {
+                            $('#pc_result').val(data);
+                        }
+                    }
+	        }
 	    });
 	    return false;
 	});

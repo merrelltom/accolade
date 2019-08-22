@@ -2,7 +2,7 @@ Title: I don't like to draw attention to myself
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

@@ -2,7 +2,7 @@ Title: Who takes the main responsibility for washing the dishes in your househol
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

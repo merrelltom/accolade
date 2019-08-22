@@ -2,7 +2,7 @@ Title: How likely are you to bet a days income on the outcome of a sporting even
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

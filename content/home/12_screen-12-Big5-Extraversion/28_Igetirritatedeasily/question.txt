@@ -2,7 +2,7 @@ Title: I get irritated easily
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

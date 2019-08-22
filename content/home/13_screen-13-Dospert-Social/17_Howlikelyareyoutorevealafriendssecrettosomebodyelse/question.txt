@@ -2,7 +2,7 @@ Title: How likely are you to reveal a friend’s secret to somebody else?
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

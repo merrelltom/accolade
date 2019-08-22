@@ -2,7 +2,7 @@ Title: What was the highest educational achievement of any adult in your househo
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

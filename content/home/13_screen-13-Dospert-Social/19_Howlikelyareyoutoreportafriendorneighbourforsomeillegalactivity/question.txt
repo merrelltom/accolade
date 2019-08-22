@@ -2,7 +2,7 @@ Title: How likely are you to report a friend or neighbour for some illegal activ
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

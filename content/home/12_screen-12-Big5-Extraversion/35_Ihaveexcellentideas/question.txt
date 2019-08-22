@@ -2,7 +2,7 @@ Title: I have excellent ideas
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

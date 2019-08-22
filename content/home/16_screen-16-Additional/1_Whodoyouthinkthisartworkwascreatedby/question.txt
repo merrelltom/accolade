@@ -2,7 +2,7 @@ Title: Who do you think this artwork was created by?
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

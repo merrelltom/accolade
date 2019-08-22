@@ -2,7 +2,7 @@ Title: I change my mood a lot
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

@@ -2,7 +2,7 @@ Title: Who takes the main responsibility for cleaning the toilets in your househ
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

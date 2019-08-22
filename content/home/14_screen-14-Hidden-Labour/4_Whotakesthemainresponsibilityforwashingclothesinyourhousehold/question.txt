@@ -2,7 +2,7 @@ Title: Who takes the main responsibility for washing clothes in your household?
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

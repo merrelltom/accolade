@@ -2,7 +2,7 @@ Title: I am the life of the party
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

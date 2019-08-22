@@ -2,7 +2,7 @@ Title: How likely are you to pass off somebody else’s work as your own?
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

@@ -2,7 +2,7 @@ Title: I have difficulty understanding abstract ideas
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

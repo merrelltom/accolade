@@ -2,7 +2,7 @@ Title: I have little to say
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

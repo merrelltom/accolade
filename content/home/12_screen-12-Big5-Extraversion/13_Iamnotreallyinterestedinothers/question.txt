@@ -2,7 +2,7 @@ Title: I am not really interested in others
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

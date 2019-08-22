@@ -2,7 +2,7 @@ Title: I don't mind being the centre of attention
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

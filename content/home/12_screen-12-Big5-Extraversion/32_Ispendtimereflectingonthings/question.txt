@@ -2,7 +2,7 @@ Title: I spend time reflecting on things
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

@@ -2,7 +2,7 @@ Title: How likely are you to take some questionable deductions on your income ta
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

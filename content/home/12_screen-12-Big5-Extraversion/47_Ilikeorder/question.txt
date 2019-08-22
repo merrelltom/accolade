@@ -2,7 +2,7 @@ Title: I like order
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

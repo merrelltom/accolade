@@ -2,7 +2,7 @@ Title: I start conversations
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

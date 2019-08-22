@@ -2,7 +2,7 @@ Title: I keep in the background
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

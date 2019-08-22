@@ -2,7 +2,7 @@ Title: Do you have any savings? (Pensions, shares, ISAs etc.)
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

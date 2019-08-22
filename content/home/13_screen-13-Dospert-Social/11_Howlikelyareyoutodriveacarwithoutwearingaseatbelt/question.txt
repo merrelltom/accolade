@@ -2,7 +2,7 @@ Title: How likely are you to drive a car without wearing a seatbelt?
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

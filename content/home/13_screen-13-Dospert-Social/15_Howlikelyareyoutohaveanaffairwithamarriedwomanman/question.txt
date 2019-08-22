@@ -2,7 +2,7 @@ Title: How likely are you to have an affair with a married woman / man?
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

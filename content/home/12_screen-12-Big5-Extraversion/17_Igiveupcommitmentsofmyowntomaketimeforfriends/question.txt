@@ -2,7 +2,7 @@ Title: I give up commitments of my own to make time for friends
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

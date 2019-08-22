@@ -1,10 +1,10 @@
 <?php snippet('header') ?>
 
-<form method="get" name="accolade-pricing-form" action=" ">   
+<form method="get" name="accolade-pricing-form" id="accolade-pricing-form" action=" ">   
   
   <?php //// Start Screen //// ?>
 
-  <section id="screen-1" class="screen start-screen selected">
+  <section id="start-screen" class="screen start-screen selected">
     <div class="screen-content">
       <h1 class="main-title screen-title">Accolade</h1>
       
@@ -24,6 +24,7 @@
         <p>
         You must be 18 or over to participate.
         </p>
+        <input type="checkbox" name="start" value="0" class="invisible" checked>
       </div>
     </div>
     
@@ -36,7 +37,7 @@
 
   <?php //// Post Code Screen //// ?>
 
-  <section id="screen-2" class="screen postcode-screen">
+  <section id="postcode-screen" class="screen postcode-screen">
     
     <div class="screen-content">
       <h2 class="screen-title large-text">What is your postcode?</h2>
@@ -44,6 +45,7 @@
         <li class="input-wrapper">
           <input type="text" class="postcode" placeholder="Enter your postcode..." name="postcode">
         </li>
+        <hr>
         <li class="answer">
           <label class="container">Not applicable / rather not say
             <input name="postcode-na" value="0" type="checkbox">
@@ -150,7 +152,7 @@
       $questions = $screen->children()->shuffle()->limit(3);
       if($questions){
         foreach ($questions as $question):?>
-          <section id="screen-" class="screen <?=$screen->slug();?>">
+          <section id="<?=$screen->slug();?>" class="screen <?=$screen->slug();?>">
             <div class="screen-content">
             
               <?php 
@@ -177,7 +179,7 @@
       $questions = $screen->children()->shuffle()->limit(2);
       if($questions){
         foreach ($questions as $question):?>
-          <section id="screen-" class="screen <?=$screen->slug();?>">
+          <section id="<?=$screen->slug();?>" class="screen <?=$screen->slug();?>">
             <div class="screen-content">
             
               <?php 
@@ -201,7 +203,7 @@
   <?php //// Financial Screen ////
     $screen = $page->children()->find('screen-15-Optional-Finance-Economic-Capital'); 
     if($screen):?>
-       <section id="screen-" class="screen <?=$screen->slug();?>">
+       <section id="<?=$screen->slug();?>" class="screen financial-screen">
             <div class="screen-content">
               <h2 class="screen-title large-text"><?= $screen->subtitle();?></h2>
               <ul class="answers">
@@ -218,7 +220,7 @@
                   </label>
                 </li>               
               </ul>
-              <div class="financial-conditional-questions">
+              <div class="financial-conditional-questions invisible">
                   <?php 
                     $questions = $screen->children();
                     $question_type = 'complex';
@@ -242,7 +244,7 @@
       $questions = $screen->children()->shuffle()->limit(1);
       if($questions){
         foreach ($questions as $question):?>
-          <section id="screen-" class="screen <?=$screen->slug();?>">
+          <section id="<?=$screen->slug();?>" class="screen <?=$screen->slug();?>">
             <div class="screen-content">
             
               <?php 
@@ -253,7 +255,7 @@
             </div>
             <div class="buttons">
               <a class="prev button">Previous</a>
-              <a class="next button">Submit Answers</a>
+              <a class="next button submit">Submit Answers</a>
             </div>
 
           </section>
@@ -263,49 +265,17 @@
     endif;
   ?> 
 
-
-  <?php $screens = $page->children();?>
-  <!-- 
-  <?php $count= 3; foreach($screens as $screen): ?>
-
-    <section id="screen-<?=$count;?>" class="screen <?=$screen->slug();?>">
-      <div class="screen-content">
-      <?php 
-        $questions = $screen->children();
-        if($questions->count() == 1): ?>
-
-          <?php $question_type = 'simple';?>
-          <?php $question = $questions->first();?>
-          <h2 class="screen-title large-text"><?= $question->title();?></h2>
-          <?php include('simple-question.php');?>
-
-        <?php else : ?>
-
-          <?php 
-            $question_type = 'complex';
-            $groups = $screen->groups()->toStructure();
-          ?>
-          <h2 class="screen-title large-text"><?= $screen->subtitle();?></h2>
-            <?php foreach ($groups as $group):
-              $group_questions = $group->group_questions()->toPages();
-              $questions_to_ask = $group->questions_to_ask()->toInt();
-              $questions = $group_questions->shuffle()->limit($questions_to_ask);
-                foreach ($questions as $question):
-                  include('simple-question.php');                  
-                endforeach;
-            endforeach;?>
-      <?php endif;?>
-    </div>
-    <div class="buttons">
-      <a class="prev button">Previous</a>
-      <a class="next button">Next</a>
-    </div>
-
-  </section>
-
-  <?php $count++; endforeach ?> -->
-
-
 </form>
+
+<section id="results-screen" class="screen results-screen">
+
+  <div class="screen-content">
+    <h2 class="screen-title large-text">Results</h2>
+    <ul id="results-list" class="answers">
+        
+    </ul>
+  </div>  
+
+</section>
 
 <?php snippet('footer') ?>

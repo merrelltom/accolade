@@ -2,7 +2,7 @@ Title: How likely are you to admit that your tastes are different from those of 
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

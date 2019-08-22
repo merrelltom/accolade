@@ -2,7 +2,7 @@ Title: What size trophy are you interested in buying?
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

@@ -2,7 +2,7 @@ Title: I am full of ideas
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

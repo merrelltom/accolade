@@ -2,7 +2,7 @@ Title: Original: I get chores done right away
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

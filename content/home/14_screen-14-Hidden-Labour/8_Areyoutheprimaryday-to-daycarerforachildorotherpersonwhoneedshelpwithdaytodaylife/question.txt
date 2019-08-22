@@ -2,7 +2,7 @@ Title: Are you the primary day-to-day carer for a child or other person who need
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

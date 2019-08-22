@@ -2,7 +2,7 @@ Title: I sympathise with others’ feelings
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

@@ -2,7 +2,7 @@ Title: Did you go a fee-paying school?
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

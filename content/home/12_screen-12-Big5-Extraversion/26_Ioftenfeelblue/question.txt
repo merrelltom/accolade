@@ -2,7 +2,7 @@ Title: I often feel blue
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

@@ -2,7 +2,7 @@ Title: What is your postcode?
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

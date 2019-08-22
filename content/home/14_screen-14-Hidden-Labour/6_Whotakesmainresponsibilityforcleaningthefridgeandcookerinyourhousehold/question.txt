@@ -2,7 +2,7 @@ Title: Who takes main responsibility for cleaning the fridge and cooker in your 
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

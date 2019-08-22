@@ -2,7 +2,7 @@ Title: What is your annual household income after taxes?
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

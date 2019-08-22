@@ -2,7 +2,7 @@ Title: I worry about things
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

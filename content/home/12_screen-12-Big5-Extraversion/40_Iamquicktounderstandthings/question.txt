@@ -2,7 +2,7 @@ Title: I am quick to understand things
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

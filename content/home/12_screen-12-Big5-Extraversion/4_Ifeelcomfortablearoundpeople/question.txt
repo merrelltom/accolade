@@ -2,7 +2,7 @@ Title: I feel comfortable around people
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

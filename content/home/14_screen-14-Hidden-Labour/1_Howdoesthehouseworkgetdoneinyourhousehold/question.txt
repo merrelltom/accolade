@@ -2,7 +2,7 @@ Title: How does the housework get done in your household?
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

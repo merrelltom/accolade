@@ -2,7 +2,7 @@ Title: Do you own or rent a property?
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

@@ -4,9 +4,12 @@ LAYOUT
 ================================================================  
 */
 
+body{
+    height:100vh;
+}
+
 .screen{
     padding:0px;
-    border-top:1px solid tomato;
     width:100vw;
     min-height:100vh;
     max-width:768px;
@@ -44,10 +47,20 @@ LAYOUT
     li{
         border-bottom: 1px solid #DCDCDC; 
         padding: 20px 0 20px;
+        word-wrap: break-word;
     }
     li:last-child{
         border-bottom:none;
     }
+    hr{
+        padding:0;
+        height:1px;
+        border-color: #DCDCDC; 
+    }
+}
+
+.required{
+    border-color: tomato;
 }
 
 .no-border{

@@ -2,7 +2,7 @@ Title: I rarely feel blue
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

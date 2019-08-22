@@ -2,7 +2,7 @@ Title: How likely are you to invest money in a friend’s business venture?
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

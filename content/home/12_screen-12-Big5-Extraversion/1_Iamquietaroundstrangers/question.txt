@@ -2,7 +2,7 @@ Title: I am quiet around strangers
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

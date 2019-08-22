@@ -1,9 +1,10 @@
-<section id="screen-" class="screen <?=$screen->slug();?>">
+<?php 
+  $question_type = 'complex';
+  $groups = $screen->groups()->toStructure();
+?>
+
+<section id="<?=$screen->slug();?>" class="screen <?=$screen->slug();?> <?= $question_type?>">
   <div class="screen-content">  
-    <?php 
-      $question_type = 'complex';
-      $groups = $screen->groups()->toStructure();
-    ?>
     <h2 class="screen-title large-text"><?= $screen->subtitle();?></h2>
       <?php foreach ($groups as $group):
         $group_questions = $group->group_questions()->toPages();

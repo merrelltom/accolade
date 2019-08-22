@@ -2,7 +2,7 @@ Title: Are you, or anyone you are related to (immediate family or aunts, uncles,
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

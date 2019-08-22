@@ -2,7 +2,7 @@ Title: Original: I shirk my duties
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

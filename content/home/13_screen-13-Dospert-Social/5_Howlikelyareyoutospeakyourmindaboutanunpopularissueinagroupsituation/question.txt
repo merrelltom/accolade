@@ -2,7 +2,7 @@ Title: How likely are you to speak your mind about an unpopular issue in a group
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

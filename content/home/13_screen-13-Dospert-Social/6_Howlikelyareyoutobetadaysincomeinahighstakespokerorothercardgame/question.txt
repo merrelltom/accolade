@@ -2,7 +2,7 @@ Title: How likely are you to bet a days income in a high stakes poker or other c
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

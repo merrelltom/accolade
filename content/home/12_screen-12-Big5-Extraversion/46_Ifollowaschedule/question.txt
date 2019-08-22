@@ -2,7 +2,7 @@ Title: I follow a schedule
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

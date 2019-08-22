@@ -2,7 +2,7 @@ Title: I get upset easily
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

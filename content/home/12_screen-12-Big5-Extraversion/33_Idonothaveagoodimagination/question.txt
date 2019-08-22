@@ -2,7 +2,7 @@ Title: I do not have a good imagination
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

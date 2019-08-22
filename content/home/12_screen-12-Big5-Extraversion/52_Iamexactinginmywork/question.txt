@@ -2,7 +2,7 @@ Title: I am exacting in my work
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

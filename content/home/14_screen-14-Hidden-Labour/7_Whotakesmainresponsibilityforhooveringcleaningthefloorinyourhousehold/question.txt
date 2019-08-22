@@ -2,7 +2,7 @@ Title: Who takes main responsibility for hoovering/ cleaning the floor in your h
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

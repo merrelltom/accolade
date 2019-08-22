@@ -2,7 +2,7 @@ Title: Do you have an established support network of friends and family living n
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

@@ -2,7 +2,7 @@ Title: I have a soft heart
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

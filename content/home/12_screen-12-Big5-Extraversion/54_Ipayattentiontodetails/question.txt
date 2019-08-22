@@ -2,7 +2,7 @@ Title: I pay attention to details
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

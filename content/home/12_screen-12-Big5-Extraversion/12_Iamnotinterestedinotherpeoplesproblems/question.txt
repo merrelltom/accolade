@@ -2,7 +2,7 @@ Title: I am not interested in other people's problems
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

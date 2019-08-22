@@ -2,7 +2,7 @@ Title: I use difficult words
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

@@ -2,7 +2,7 @@ Title: Who takes main responsibility for cleaning the bathroom in your household
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

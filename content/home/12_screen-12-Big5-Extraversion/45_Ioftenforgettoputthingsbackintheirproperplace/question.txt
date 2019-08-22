@@ -2,7 +2,7 @@ Title: I often forget to put things back in their proper place
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

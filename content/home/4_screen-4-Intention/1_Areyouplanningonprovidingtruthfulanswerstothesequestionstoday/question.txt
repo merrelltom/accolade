@@ -2,7 +2,7 @@ Title: Are you planning on providing truthful answers to these questions today?
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

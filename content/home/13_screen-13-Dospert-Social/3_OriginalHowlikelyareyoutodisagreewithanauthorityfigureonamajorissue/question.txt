@@ -2,7 +2,7 @@ Title: Original: How likely are you to disagree with an authority figure on a ma
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

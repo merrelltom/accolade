@@ -2,7 +2,7 @@ Title: I have a lackadaisical approach to things
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

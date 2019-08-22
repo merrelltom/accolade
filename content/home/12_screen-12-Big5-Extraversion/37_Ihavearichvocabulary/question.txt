@@ -2,7 +2,7 @@ Title: I have a rich vocabulary
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

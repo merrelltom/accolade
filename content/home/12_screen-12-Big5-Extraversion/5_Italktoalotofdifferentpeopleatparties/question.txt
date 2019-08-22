@@ -2,7 +2,7 @@ Title: I talk to a lot of different people at parties
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

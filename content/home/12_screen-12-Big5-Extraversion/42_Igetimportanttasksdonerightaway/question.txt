@@ -2,7 +2,7 @@ Title: I get important tasks done right away
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

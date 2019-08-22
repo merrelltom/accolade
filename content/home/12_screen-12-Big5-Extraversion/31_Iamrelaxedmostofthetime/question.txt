@@ -2,7 +2,7 @@ Title: I am relaxed most of the time
 
 ----
 
-Question-type: false
+Allow-multiple: false
 
 ----
 

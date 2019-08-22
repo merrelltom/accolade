@@ -17,7 +17,7 @@ $(document).ready(function() {
 
 
 		// If validated proceed to next
-		if(validation = true){
+		if(validation === true){
 			$(this).closest('.screen').removeClass('selected');
 			next.addClass('selected');
 			tm_body.scrollTop(0);	
@@ -35,7 +35,7 @@ $(document).ready(function() {
 
 
 		// If validated proceed to next
-		if(validation = true){
+		if(validation === true){
 			$(this).closest('.screen').removeClass('selected');
 			next.addClass('selected');	
 			tm_body.scrollTop(0);
@@ -44,7 +44,25 @@ $(document).ready(function() {
 		// If error show error message
 
 	});
-
+        
+        tm_body.on('click', '#pc_check', function(){
+            var x = document.getElementById("postcode").value;
+            //console.log(x);
+            $.ajax({
+                type: "POST",
+                url: "assets/php/postcode_get.php",
+                dataType: 'json',
+                data: {postcode: x},
+                success: function (data) {
+                    if (Number.isInteger(data)) {
+                        console.log(data); }
+                    }, 
+                error: function () {
+                        console.log('Postcode not found...');
+                    }
+            });
+            return false;
+        });
 
 
 

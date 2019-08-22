@@ -41,10 +41,8 @@
       <h2 class="screen-title large-text">What is your postcode?</h2>
       <ul class="answers no-border">
         <li class="input-wrapper">
-        <form method="POST">
         <input type="text" id="postcode" class="postcode" placeholder="Enter your postcode...">
-        </form>
-        <button type=button onclick="postcode_func()"/>Check Postcode</button>
+        <button type=button id="pc_check"/>Check Postcode</button>
         </li>
         <li class="answer">
           <label class="container">Not applicable / rather not say
@@ -58,24 +56,6 @@
       <a class="prev button">Previous</a>
       <a class="next button">Next</a>
     </div>
-   
-    <script>
-        function postcode_func(){
-            var x = document.getElementById("postcode").value;
-            console.log(x);
-            $.ajax({
-                type: "POST",
-                url: "assets/php/postcode_get.php",
-                dataType: 'json',
-                data: {postcode: x},
-                success: function (data) {
-                  console.log(data);
-                }
-            });
-            return false;
-        }
-    </script>
-      
   </section>
 
 

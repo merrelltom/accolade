@@ -18,7 +18,7 @@ if (isset($_POST['postcode'])) {
     $db = new SQLite3('../db/simple_postcode.db', SQLITE3_OPEN_READWRITE);
 
     $statement = $db->prepare('SELECT "SPRGRP" FROM "simple_lookup" WHERE "PCD" = ?');
-    $statement->bindValue(1, $postcode);
+    $statement->bindValue(1, strtoupper($postcode));
     $result = $statement->execute();
 
     //echo("Get the 1st row as an associative array:\n");

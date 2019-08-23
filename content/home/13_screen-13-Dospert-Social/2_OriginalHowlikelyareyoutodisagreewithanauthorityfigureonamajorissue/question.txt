@@ -1,4 +1,4 @@
-Title: Original: How likely are you to disagree with an authority figure on a major issue?
+Title: How likely are you to disagree with your parents on a major issue?
 
 ----
 
@@ -8,21 +8,21 @@ Allow-multiple: false
 
 Answers:
 
--
+- 
+  answer_label: Very unlikely
+  answer_value: -10
+- 
   answer_label: Unlikely
   answer_value: -5
--
+- 
   answer_label: Not sure
   answer_value: 0
--
+- 
   answer_label: Likely
   answer_value: 5
--
+- 
   answer_label: Very Likely
   answer_value: 10
--
+- 
   answer_label: Not applicable / rather not say
   answer_value: 0
-
-----
-

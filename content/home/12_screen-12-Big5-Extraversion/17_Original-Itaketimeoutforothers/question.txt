@@ -1,4 +1,4 @@
-Title: Original: I get chores done right away
+Title: I give up commitments of my own to make time for friends
 
 ----
 
@@ -8,21 +8,21 @@ Allow-multiple: false
 
 Answers:
 
--
+- 
+  answer_label: Very Innacurate
+  answer_value: -10
+- 
   answer_label: Moderately inaccurate
-  answer_value: 5
--
+  answer_value: -5
+- 
   answer_label: Neither inaccurate or accurate
   answer_value: 0
--
+- 
   answer_label: Moderately accurate
-  answer_value: -5
--
+  answer_value: 5
+- 
   answer_label: Very accurate
-  answer_value: -10
--
+  answer_value: 10
+- 
   answer_label: Not applicable / rather not say
   answer_value: 0
-
-----
-

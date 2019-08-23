@@ -14,7 +14,7 @@ Large-trophy-price: 300
 
 ----
 
-Modifier: 12
+Modifier: 1
 
 ----
 

@@ -5,9 +5,12 @@ var errorMessage = 'Please enter an answer for all questions';
 var score = 0;
 var modifier = 1;
 var question_vals = {};
-var price = 100;
+var price = 0;
 
-
+function gen_result(p,m,s) {
+    var n = Math.pow(1 + m/100, s);
+    return (p * n).toFixed(2);
+ }
 
 $(document).ready(function() {
 
@@ -86,7 +89,7 @@ $(document).ready(function() {
                                 running_total += parseInt($(this).val());
                             }
                         });
-                        console.log("Running total:" + running_total);
+                        console.log("Running total:" + running_total + ", price: £" + gen_result(price, modifier, running_total));
 		}
 
 	});
@@ -100,7 +103,6 @@ $(document).ready(function() {
 	});
 
 	tm_body.on('click', '.submit', function(){
-                var total
 		$('input:checked').each(function(){
 //			score.push($(this).val());
                         if ( $.isNumeric($(this).val()) ) {
@@ -114,7 +116,7 @@ $(document).ready(function() {
                 });
                 $("#results-list").append("<li>SCORE: " + score + "</li>");
                 var result = gen_result(price, modifier, score);
-                $("#results-list").append("<li>FUNCTION: "+price+" *(1 + "+modifier+"/100) ^ "+score+"  =  "+result+"</li>");
+                $("#results-list").append("<li>FUNCTION: "+price+" *(1 + "+modifier+"/100) ^ "+score+"  =  £"+result+"</li>");
                 
                 $('#results-screen').show();
 	});

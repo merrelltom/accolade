@@ -1,5 +1,5 @@
 <?php snippet('header') ?>
-
+<div id="total-bar" style="position: fixed; top:0; left:0; height:15px; padding: 0 5px 0; background:black; text-align: center; color: white; line-height: 15px; font-size: 10px;">Running total:0, price: £0.00</div>
 <form method="get" name="accolade-pricing-form" id="accolade-pricing-form" action=" ">   
   
   <?php //// Start Screen //// ?>
@@ -45,7 +45,7 @@
         <input type="text" id="postcode" class="postcode" placeholder="Enter your postcode...">
         <input id="pc_result" type="checkbox" name="postcode result" value="0" class="invisible" checked>
         </li>
-        <button id="pc_check" type="button"/>Check Postcode</button>
+        <button id="pc_check" type="button"/>Check Postcode</button><div id="postcode-message"> </div>
         <hr>
         <li class="answer">
           <label class="container">Not applicable / rather not say

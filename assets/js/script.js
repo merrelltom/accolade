@@ -89,7 +89,7 @@ $(document).ready(function() {
                                 running_total += parseInt($(this).val());
                             }
                         });
-                        console.log("Running total:" + running_total + ", price: £" + gen_result(price, modifier, running_total));
+                        document.getElementById("total-bar").innerHTML = "Running total:" + running_total + ", price: £" + gen_result(price, modifier, running_total);
 		}
 
 	});
@@ -124,6 +124,7 @@ $(document).ready(function() {
 
         tm_body.on('click', '#pc_check', function(){
 	    var x = document.getElementById("postcode").value;
+	    console.log('clicked');
 	    //console.log(x);
 	    $.ajax({
 	        type: "POST",
@@ -134,7 +135,11 @@ $(document).ready(function() {
 	            if (Number.isInteger(data)) {
 	                if (data != -99) {
                             $('#pc_result').val(data);
+                           	document.getElementById("postcode-message").innerHTML = '<div class="inner valid">Postcode valid</span>';
                         }
+                    }
+                    if (data == -99){
+                    	document.getElementById("postcode-message").innerHTML ='<div class="inner error">Postcode not valid</span>';
                     }
 	        }
 	    });

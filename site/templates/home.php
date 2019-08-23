@@ -41,11 +41,12 @@
     <div class="screen-content">
       <h2 class="screen-title large-text">What is your postcode?</h2>
       <ul class="answers no-border">
+        <div id="postcode-message"> </div>
         <li class="input-wrapper">
         <input type="text" id="postcode" class="postcode" placeholder="Enter your postcode...">
         <input id="pc_result" type="checkbox" name="postcode result" value="0" class="invisible" checked>
         </li>
-        <button id="pc_check" type="button"/>Check Postcode</button><div id="postcode-message"> </div>
+        <button id="pc_check" type="button"/>Check Postcode</button>
         <hr>
         <li class="answer">
           <label class="container">Not applicable / rather not say

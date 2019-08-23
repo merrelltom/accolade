@@ -6,6 +6,7 @@ LAYOUT
 
 body{
     height:100vh;
+    background:black;
 }
 
 .screen{
@@ -15,6 +16,8 @@ body{
     max-width:768px;
     flex-direction: column;
     display:none;
+    margin:0 auto;
+    background:white;
 }
 
 .selected{

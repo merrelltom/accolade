@@ -3,14 +3,18 @@ var tm_body = jQuery( 'body' );
 var validation = false;
 var errorMessage = 'Please enter an answer for all questions';
 var score = 0;
+var modifier = 1;
 var question_vals = {};
 var price = 100;
-var modifier = 1;
+
 
 
 $(document).ready(function() {
 
-
+	modifier = tm_body.attr('data-modifier');
+	largePrice = tm_body.attr('data-large');
+	mediumPrice = tm_body.attr('data-medium');
+	smallPrice = tm_body.attr('data-small');
 
 	/*  
 	================================================================
@@ -33,6 +37,22 @@ $(document).ready(function() {
 				questions.addClass('required');
 			}else{
 				questions.removeClass('required');
+			}
+		}else if(parent.hasClass('trophy-selection')){
+			var answers = parent.find('input:checked');
+			if(answers.length == 0){
+				questions.addClass('required');
+			}else{
+				if(parent.find('input:checked').val() == 'small'){
+					price = smallPrice
+				}
+				if(parent.find('input:checked').val() == 'medium'){
+					price = mediumPrice
+				}
+				if(parent.find('input:checked').val() == 'large'){
+					price = largePrice
+				}
+				console.log(price);
 			}
 		}else{ 
 			// loop through each question on the screen

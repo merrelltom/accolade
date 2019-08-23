@@ -1,5 +1,3 @@
-<span class="visuallyhidden"><?php echo 'allow multiple:' . $question->allow_multiple();?></span>
-
 <?php
 	if($question->allow_multiple() == 'false'):
 		$type = 'radio';

@@ -11,7 +11,24 @@ columns:
   # The first column has one section for the subpages of the `photography` page in card layout
   # It reuses the pages section defined in `/site/blueprints/sections/albums.yml`
   - width: 1/2
-
+    fields:
+      small_trophy_price:
+        label: Small Trophy Price
+        type: number
+        width: 1/3
+      medium_trophy_price:
+        label: Medium Trophy Price
+        type: number
+        width: 1/3
+      large_trophy_price:
+        label: Large Trophy Price
+        type: number
+        width: 1/3
+      modifier:
+        label: Modifier
+        type: number
+        width: 1/3
+        
   # The second column has two sections, `notes` and `pages`
   - width: 1/2
     sections:

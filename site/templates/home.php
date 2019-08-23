@@ -69,12 +69,36 @@
     endif;
   ?>
 
-  <?php //// Trophy Selection ////
-    $screen = $page->children()->find('screen-3-Trophy-Selection'); 
-    if($screen):
-      include('simple-question-content.php');
-    endif;
-  ?>
+  <?php //// Trophy Selection //// ?>
+    <section id="trophy-selection" class="screen trophy-selection simple">
+      <div class="screen-content">
+          <h2 class="screen-title large-text">What size trophy are you interested in buying?</h2>
+            <span class="visuallyhidden">allow multiple:false</span>
+          <ul class="answers">
+                <li class="answer">
+              <label class="container">Small      <input name="What size trophy are you interested in buying?" value="small" type="radio">
+                <span class="checkmark"></span>
+              </label>
+            </li> 
+
+              <li class="answer">
+              <label class="container">Medium     <input name="What size trophy are you interested in buying?" value="medium" type="radio">
+                <span class="checkmark"></span>
+              </label>
+            </li> 
+
+              <li class="answer">
+              <label class="container">Large      <input name="What size trophy are you interested in buying?" value="large" type="radio">
+                <span class="checkmark"></span>
+              </label>
+            </li> 
+          </ul>  
+        </div>
+        <div class="buttons">
+          <a class="prev button">Previous</a>
+          <a class="next button">Next</a>
+        </div>
+    </section>
 
   <?php //// Intention ////
     $screen = $page->children()->find('screen-4-Intention'); 

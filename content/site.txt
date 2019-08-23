@@ -1,1 +1,21 @@
 Title: Accolade
+
+----
+
+Small-trophy-price: 100
+
+----
+
+Medium-trophy-price: 200
+
+----
+
+Large-trophy-price: 300
+
+----
+
+Modifier: 12
+
+----
+
+Test: ww

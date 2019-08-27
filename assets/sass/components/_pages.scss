@@ -74,7 +74,6 @@ body{
 .buttons{
     width:100%;
     bottom: 0;
-    border-top:2px solid black;
 }
 
 a.button{
@@ -89,11 +88,13 @@ a.button{
 }
 
 .next{
+    border-top:2px solid black;
     float:right;
     border-left: 2px solid black;
 }
 
 .prev{
+    border-top:2px solid black;
     float: left;
 }
 

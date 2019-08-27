@@ -7,6 +7,10 @@ var modifier = 1;
 var question_vals = {};
 var price = 0;
 
+var prevTime = 0;
+var t;
+var started;
+
 function gen_result(p,m,s) {
     var n = Math.pow(1 + m/100, s);
     return (p * n).toFixed(2);
@@ -56,6 +60,7 @@ $(document).ready(function() {
 					price = largePrice
 				}
 				console.log(price);
+				questions.removeClass('required');
 			}
 		}else{ 
 			// loop through each question on the screen
@@ -80,6 +85,7 @@ $(document).ready(function() {
 
 		// If validated proceed to next
 		if(validation == true){
+			started = 1;
 			$(this).closest('.screen').removeClass('selected');
 			next.addClass('selected');
 			$(document).scrollTop(0);
@@ -162,6 +168,42 @@ $(document).ready(function() {
 	});
 
 
+	/*  
+	================================================================
+	TIMER AND RESET
+	================================================================  
+	*/
+
+	timer();
+
+	$(window).on('click tapstart scroll', _.throttle(function(){prevTime = 0;console.log('reset')}, 200));
+
+
+	function timer(){
+		var currentTime = new Date().getTime();
+		// console.log(currentTime, prevTime);
+		if (prevTime == 0){
+				prevTime = new Date().getTime();
+			}
+		if(currentTime - prevTime > 60000 && started == 1){
+			tm_body.addClass('show-restart');
+		}
+		if(currentTime - prevTime > 90000 && started == 1){
+			restart();
+		}
+		t = setTimeout(function(){ timer() }, 1000);
+	}
+
+	function restart(){
+		location.reload();
+	}
+
+	function continueSesh(){
+		tm_body.removeClass('show-restart');
+	}
+
+	tm_body.on('click', '.continue', continueSesh);
+	tm_body.on('click', '.restart', restart);
 
 
 });/*CLOSE*/

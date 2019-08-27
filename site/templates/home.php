@@ -46,7 +46,7 @@
         <input type="text" id="postcode" class="postcode" placeholder="Enter your postcode...">
         <input id="pc_result" type="checkbox" name="postcode result" value="0" class="invisible" checked>
         </li>
-        <button id="pc_check" type="button"/>Check Postcode</button>
+        <!-- <button id="pc_check" type="button"/>Check Postcode</button> -->
         <hr>
         <li class="answer">
           <label class="container">Not applicable / rather not say
@@ -151,7 +151,7 @@
     endif;
   ?>
 
-  <?php //// Ask 1 of 2 Cultural Social Questoins //// 
+  <?php //// Ask 1 of 2 Cultural Social Questions //// 
     $int = rand(1,100);
     if($int < 60){
       $screen = $page->children()->find('screen-11-Cultural-Capital'); 
@@ -301,5 +301,20 @@
   </div>  
 
 </section>
+
+
+
+
+<div class="restart-wrapper">
+  <div class="restart-alert">
+    <div class="restart-alert-inner">
+      <h3>Timed Out</h3>
+      <p>Do you wish to continue?</p>
+      <div class="button-group">
+        <a class="button continue">Continue</a><a class="button restart">Restart</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <?php snippet('footer') ?>

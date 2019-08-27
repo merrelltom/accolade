@@ -74,7 +74,6 @@ body{
 .buttons{
     width:100%;
     bottom: 0;
-    border-top:2px solid black;
 }
 
 a.button{
@@ -89,11 +88,13 @@ a.button{
 }
 
 .next{
+    border-top:2px solid black;
     float:right;
     border-left: 2px solid black;
 }
 
 .prev{
+    border-top:2px solid black;
     float: left;
 }
 
@@ -113,3 +114,46 @@ a.button{
         color: tomato;
     }
 }
+
+.restart-wrapper{
+    position: fixed;
+    top:0;
+    left:0;
+    background: rgba(255,255,255,.9);
+    z-index:333;
+    width:100%;
+    height:100%;
+    display: none;
+}
+
+.restart-alert{
+    position:fixed;
+    top:50%;
+    left:50%;
+    width:500px;
+    height:auto;
+    border:2px solid black;
+    z-index: 444;
+    background:white;
+    transform: translate(-50%,-50%);
+    h3{
+        padding:10px 15px 10px;
+        border-bottom: 2px solid black        
+    }
+    p{
+        padding:15px 15px 50px;
+    }
+    .button-group{
+     }
+    .button{
+         border-top:2px solid black;
+    }
+    .button:first-child{
+        border-right:2px solid black;
+    }
+}
+
+.show-restart .restart-wrapper{
+    display: block;
+}
+

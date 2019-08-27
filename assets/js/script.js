@@ -8,7 +8,7 @@ var question_vals = {};
 var price = 0;
 
 function gen_result(p,m,s) {
-    var n = Math.pow(1 + m/100, s);
+    var n = Math.pow(1 + m/100, (0 - s));
     return (p * n).toFixed(2);
  }
 

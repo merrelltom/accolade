@@ -368,8 +368,8 @@
         </div>
         
         <div class="buttons">
-          <a class="prev button pay_cashier">Pay at Cashier</a>
-          <a class="next button pay_online">Pay Online</a>
+          <a data-href="<?= $site->children()->find('pay-cashier')->url(); ?>" class="prev button pay_cashier">Pay at Cashier</a>
+          <a data-href="<?= $site->children()->find('online-payment-screen')->url(); ?>" class="next button pay_online">Pay Online</a>
         </div>
 
       </section>

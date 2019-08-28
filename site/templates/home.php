@@ -314,7 +314,7 @@
 
             <div class="prices-wrapper">
               <p>Your personalised price valid for today:</p>
-              <p id="results-price"></p>
+              <p class="xl-text" id="results-price"></p>
             </div>
           </div>
         </div>

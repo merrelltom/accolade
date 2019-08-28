@@ -5,3 +5,13 @@ title: Pay Chashier
 # Each page can have an icon that is shown in page listings when no preview image is available.
 icon: 📝
 
+columns:
+  - width: 2/3
+    fields:
+      subtitle:
+        label: Title 
+        type: text
+      body_text:
+        label: Body Text
+        type: textarea  
+        size: large

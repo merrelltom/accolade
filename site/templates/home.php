@@ -150,10 +150,58 @@
     endif;
   ?>  
 
-  <?php //// Big5 Extraversion //// 
+
+  <?php //// Agreeableness and Extroversion ////
     $screen = $page->children()->find('screen-12-Big5-Extraversion'); 
     if($screen):
-      include('complex-question-content.php');
+      $questions = $screen->children()->shuffle()->limit(3);
+      if($questions){
+        foreach ($questions as $question):?>
+          <section id="<?=$screen->slug();?>" class="screen <?=$screen->slug();?>">
+            <div class="screen-content">
+            
+              <?php 
+                  $question_type = 'simple';
+              ?>
+                <h2 class="screen-title large-text"><?= $question->title();?></h2>
+                  <?php include('simple-question.php');?>
+            </div>
+            <div class="buttons">
+              <a class="prev button">Previous</a>
+              <a class="next button">Next</a>
+            </div>
+
+          </section>
+
+        <?php endforeach;
+      }
+    endif;
+  ?> 
+
+  <?php //// Neuroticism, Openness, Conscientiousness ////
+    $screen = $page->children()->find('neuroticism-openness-conscientiousness'); 
+    if($screen):
+      $questions = $screen->children()->shuffle()->limit(3);
+      if($questions){
+        foreach ($questions as $question):?>
+          <section id="<?=$screen->slug();?>" class="screen <?=$screen->slug();?>">
+            <div class="screen-content">
+            
+              <?php 
+                  $question_type = 'simple';
+              ?>
+                <h2 class="screen-title large-text"><?= $question->title();?></h2>
+                  <?php include('simple-question.php');?>
+            </div>
+            <div class="buttons">
+              <a class="prev button">Previous</a>
+              <a class="next button">Next</a>
+            </div>
+
+          </section>
+
+        <?php endforeach;
+      }
     endif;
   ?>
 

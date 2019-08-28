@@ -16,5 +16,8 @@ columns:
       screens: 
         type: pages
         headline: Screens
-        template: screen
+        template: 
+          screen
+          start_screen
+          results_screen
         empty: No screens yet

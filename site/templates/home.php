@@ -2,38 +2,25 @@
 <div id="total-bar" style="position: fixed; top:0; left:0; height:15px; padding: 0 5px 0; background:black; text-align: center; color: white; line-height: 15px; font-size: 10px;">Running total:0, price: £0.00</div>
 <form method="get" name="accolade-pricing-form" id="accolade-pricing-form" action=" ">   
   
-  <?php //// Start Screen //// ?>
+  <?php //// Start Screen //// 
+    $screen = $page->children()->find('start-screen'); 
+    if($screen):?>
+      <section id="start-screen" class="screen start-screen selected">
+        <div class="screen-content">
+          <h1 class="main-title screen-title"><?= $screen->subtitle();?></h1>
+          
+          <div class="answers">
+            <?= $screen->body_text()->kirbyText();?>
+            <input type="checkbox" name="start" value="0" class="invisible" checked>
+          </div>
+        </div>
+        
+        <div class="buttons">
+          <a class="next button">Proceed</a>
+        </div>
 
-  <section id="start-screen" class="screen start-screen selected">
-    <div class="screen-content">
-      <h1 class="main-title screen-title">Accolade</h1>
-      
-      <div class="answers">
-        <p>
-        Welcome to the online pricing algorithm for Accolade.   By answering a series of questions designed to measure various factors which effect a person’s chances of achieving societal success you will be presented with a personalised price adjusted according to the responses.  
-        </p>
-        <p>
-        All questions are optional and those who might often find themselves penalised in the various games that society plays may be rewarded with significant discounts.
-        </p>
-        <p>
-        Once you have been presented with the personalised price you can decide whether or not you would like to purchase the artwork.
-        </p>
-        <p>
-        All data other than the final price and selected trophy size will be automatically deleted [insert time frame? Daily etc.].
-        </p>
-        <p>
-        You must be 18 or over to participate.
-        </p>
-        <input type="checkbox" name="start" value="0" class="invisible" checked>
-      </div>
-    </div>
-    
-    <div class="buttons">
-      <a class="next button">Proceed</a>
-    </div>
-
-  </section>
-
+      </section>
+    <?php endif; ?>
 
   <?php //// Post Code Screen //// ?>
 
@@ -291,17 +278,54 @@
 
 </form>
 
-<section id="results-screen" class="screen results-screen">
 
-  <div class="screen-content">
-    <h2 class="screen-title large-text">Results</h2>
-    <ul id="results-list" class="answers">
+  <?php //// Results Screen //// 
+    $screen = $page->children()->find('results-screen'); 
+    if($screen):?>
+      <section id="results-screen" class="screen results-screen">
+        <div class="screen-content">
+          <h1 class="main-title screen-title"><?= $screen->subtitle();?></h1>
+          
+          <div class="answers">
+            <?= $screen->body_text()->kirbyText();?>
+            <ul id="results-list" class="answers invisible">
+          
+            </ul>
+            <br><br>
+            <ul class=" ">
+                  <li class="answer">
+                <label class="container">Small Trophy    <input id="trophy-results-small" name="trophy-results" value="small" type="radio">
+                  <span class="checkmark"></span>
+                </label>
+              </li> 
+
+                <li class="answer">
+                <label class="container">Medium Trophy     <input id="trophy-results-medium" name="trophy-results" value="medium" type="radio">
+                  <span class="checkmark"></span>
+                </label>
+              </li> 
+
+                <li class="answer">
+                <label class="container">Large Trophy      <input id="trophy-results-large" name="trophy-results" value="large" type="radio">
+                  <span class="checkmark"></span>
+                </label>
+              </li> 
+            </ul>
+
+            <div class="prices-wrapper">
+              <p>Your personalised price valid for today:</p>
+              <p id="results-price"></p>
+            </div>
+          </div>
+        </div>
         
-    </ul>
-  </div>  
+        <div class="buttons">
+          <a class="prev button pay_cashier">Pay at Cashier</a>
+          <a class="next button pay_online">Pay Online</a>
+        </div>
 
-</section>
-
+      </section>
+    <?php endif; ?>
 
 
 

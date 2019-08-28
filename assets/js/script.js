@@ -122,10 +122,26 @@ $(document).ready(function() {
                     $("#results-list").append("<li>" + field.name + ": " + field.value + "</li>");  
                 });
                 $("#results-list").append("<li>SCORE: " + score + "</li>");
+                
+
                 var result = gen_result(price, modifier, score);
+                
                 $("#results-list").append("<li>FUNCTION: "+price+" *(1 + "+modifier+"/100) ^ "+score+"  =  £"+result+"</li>");
                 
-                $('#results-screen').show();
+                // Check appropriate trophy size on results screen
+				if(price == smallPrice){
+					$("#trophy-results-small").prop("checked", true);
+				}
+				if(price == mediumPrice){
+					$("#trophy-results-medium").prop("checked", true);
+				}
+				if(price == largePrice){
+					$("#trophy-results-large").prop("checked", true);
+				}
+				// Add Price to results screen
+				$("#results-price").append("£"+result);
+				$(this).closest('.screen').removeClass('selected');
+                $('#results-screen').addClass('selected');
 	});
 
 

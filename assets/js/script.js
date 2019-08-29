@@ -229,6 +229,12 @@ $(document).ready(function() {
                $('#payment_submit').submit();
                
         });
+        
+        tm_body.on('click', '#pay_cashier', function(){
+               $('#payment_submit').attr('action', $(this).attr("data-href"));
+               $('#payment_submit').submit();
+               
+        });
 
 	/*  
 	================================================================

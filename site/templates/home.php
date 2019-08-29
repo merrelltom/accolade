@@ -368,8 +368,12 @@
         </div>
         
         <div class="buttons">
-          <a data-href="<?= $site->children()->find('pay-cashier')->url(); ?>" class="prev button pay_cashier">Pay at Cashier</a>
-          <a data-href="<?= $site->children()->find('online-payment-screen')->url(); ?>" class="next button pay_online">Pay Online</a>
+          <form id="payment_submit" action=''method='post'>
+          <a data-href="<?= $site->children()->find('pay-cashier')->url(); ?>" class="button pay_cashier" id="pay_cashier">Pay at Cashier</a>
+          <a data-href="<?= $site->children()->find('online-payment-screen')->url(); ?>" class="button pay_online" id="pay_online">Pay Online</a>
+          <input type="hidden" name="trophy-size">
+          <input type="hidden" name="final-price">
+          </form>
         </div>
 
       </section>

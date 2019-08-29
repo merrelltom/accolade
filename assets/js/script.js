@@ -52,14 +52,15 @@ $(document).ready(function() {
 				questions.addClass('required');
 			}else{
 				if(parent.find('input:checked').val() == 'small'){
-					price = smallPrice
+					price = smallPrice;
 				}
 				if(parent.find('input:checked').val() == 'medium'){
-					price = mediumPrice
+					price = mediumPrice;
 				}
 				if(parent.find('input:checked').val() == 'large'){
-					price = largePrice
+					price = largePrice;
 				}
+                                $('input[name="trophy-size"]').val(parent.find('input:checked').val());
 				console.log(price);
 				questions.removeClass('required');
 			}
@@ -106,7 +107,7 @@ $(document).ready(function() {
 		var next = $(this).closest('.screen').prev('.screen');
 		$(this).closest('.screen').removeClass('selected');
 		next.addClass('selected');	
-		$(document).scrollTop(0)
+		$(document).scrollTop(0);
 	});
 
 	tm_body.on('click', '.submit', function(){
@@ -125,6 +126,7 @@ $(document).ready(function() {
                 
 
                 var result = gen_result(price, modifier, score);
+                $('input[name="final-price"]').val(result);
                 
                 $("#results-list").append("<li>FUNCTION: "+price+" *(1 + "+modifier+"/100) ^ "+score+"  =  £"+result+"</li>");
                 
@@ -185,7 +187,18 @@ $(document).ready(function() {
 			$('.financial-conditional-questions').slideUp(500);
 		}
 	});
-
+        
+        /*  
+	================================================================
+	PAYMENT SUBMIT
+	================================================================  
+	*/
+        
+        tm_body.on('click', '#pay_online', function(){
+               $('#payment_submit').attr('action', $(this).attr("data-href"));
+               $('#payment_submit').submit();
+               
+        });
 
 	/*  
 	================================================================

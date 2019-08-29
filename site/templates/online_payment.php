@@ -29,7 +29,7 @@
          ?>
           <h2 class="screen-title large-text">Online Payment</h2>
             <div class="answers">
-              <h3 class="subtitle">Your Order:<?php echo $id; ?></h3>
+              <h3 class="subtitle">Order Number: <?php echo $id; ?></h3>
               <ul>
                 <li>Trophy Size: <?= $size;?></li>
                 <li>Price: <?= $price;?></li>   

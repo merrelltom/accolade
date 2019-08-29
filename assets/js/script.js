@@ -53,14 +53,17 @@ $(document).ready(function() {
 			}else{
 				if(parent.find('input:checked').val() == 'small'){
 					price = smallPrice;
+					$("#trophy-results-small").prop("checked", true);
 				}
 				if(parent.find('input:checked').val() == 'medium'){
 					price = mediumPrice;
+					$("#trophy-results-medium").prop("checked", true);
 				}
 				if(parent.find('input:checked').val() == 'large'){
 					price = largePrice;
+					$("#trophy-results-large").prop("checked", true);
 				}
-                                $('input[name="trophy-size"]').val(parent.find('input:checked').val());
+                $('input[name="trophy-size"]').val(parent.find('input:checked').val());
 				console.log(price);
 				questions.removeClass('required');
 			}
@@ -110,12 +113,21 @@ $(document).ready(function() {
 		$(document).scrollTop(0);
 	});
 
-	tm_body.on('click', '.submit', function(){
+
+	/*  
+	================================================================
+	CALCULATE PRICE
+	================================================================  
+	*/
+
+	tm_body.on('click', '.submit', calculatePrice);
+
+
+	function calculatePrice(){
 		$('input:checked').each(function(){
-//			score.push($(this).val());
-                        if ( $.isNumeric($(this).val()) ) {
-                            score += parseInt($(this).val());
-                        }
+            if ( $.isNumeric($(this).val()) ) {
+                score += parseInt($(this).val());
+            }
 		});
                 
 		var x = $("#accolade-pricing-form").serializeArray();  
@@ -129,23 +141,19 @@ $(document).ready(function() {
                 $('input[name="final-price"]').val(result);
                 
                 $("#results-list").append("<li>FUNCTION: "+price+" *(1 + "+modifier+"/100) ^ "+score+"  =  £"+result+"</li>");
-                
-                // Check appropriate trophy size on results screen
-				if(price == smallPrice){
-					$("#trophy-results-small").prop("checked", true);
-				}
-				if(price == mediumPrice){
-					$("#trophy-results-medium").prop("checked", true);
-				}
-				if(price == largePrice){
-					$("#trophy-results-large").prop("checked", true);
-				}
+
 				// Add Price to results screen
-				$("#results-price").append("£"+result);
+				$("#results-price").html("£"+result);
 				$(this).closest('.screen').removeClass('selected');
                 $('#results-screen').addClass('selected');
-	});
+	}
 
+
+	/*  
+	================================================================
+	POSTCODE CHECK
+	================================================================  
+	*/
 
     function postcodeCheck(){
 	    var x = document.getElementById("postcode").value;
@@ -187,8 +195,30 @@ $(document).ready(function() {
 			$('.financial-conditional-questions').slideUp(500);
 		}
 	});
+
+
+    /*  
+	================================================================
+	CHANGE TROPHY SIZE ON RESULTS PAGE
+	================================================================  
+	*/
+
+
+	tm_body.on('change', 'input[type=radio][name=trophy-results]', function(){
+		if($(this).val() == 'small'){
+			price = smallPrice;
+		}
+		if($(this).val() == 'medium'){
+			price = mediumPrice;
+		}
+		if($(this).val() == 'large'){
+			price = largePrice;
+		}
+		var result = gen_result(price, modifier, score);
+		$("#results-price").html("£"+result);
+	});
         
-        /*  
+    /*  
 	================================================================
 	PAYMENT SUBMIT
 	================================================================  
@@ -216,7 +246,7 @@ $(document).ready(function() {
 
 	function timer(){
 		var currentTime = new Date().getTime();
-		console.log(prevTime - currentTime );
+		// console.log(prevTime - currentTime );
 		if (prevTime == 0){
 				prevTime = new Date().getTime();
 			}

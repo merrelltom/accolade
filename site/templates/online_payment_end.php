@@ -34,6 +34,9 @@
       <?= $body;?>
     </div>
   </div>
+  <div class="buttons">
+    <a href="<?= $site->url();?>" class="left button">Restart</a>
+  </div>
 </section>
 
 <div class="restart-wrapper">

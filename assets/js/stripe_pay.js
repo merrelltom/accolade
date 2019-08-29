@@ -24,12 +24,17 @@ form.addEventListener('submit', function(event) {
       // Display error.message in your UI.
     } else {
         console.log(result);
-        var hiddenInput = document.createElement('input');
-        hiddenInput.setAttribute('type', 'hidden');
-        hiddenInput.setAttribute('name', 'payment_id');
-        hiddenInput.setAttribute('value', result.paymentIntent.id);
-        form.appendChild(hiddenInput);
-//        form.submit();
+        var idInput = document.createElement('input');
+        idInput.setAttribute('type', 'hidden');
+        idInput.setAttribute('name', 'payment_id');
+        idInput.setAttribute('value', result.paymentIntent.id);
+        form.appendChild(idInput);
+        var emailInput = document.createElement('input');
+        emailInput.setAttribute('type', 'hidden');
+        emailInput.setAttribute('name', 'email');
+        emailInput.setAttribute('value', cardholderName.value);
+        form.appendChild(emailInput);
+        form.submit();
     }
   });
 });

@@ -1,7 +1,12 @@
-<?php snippet('header') ?>
-
-<?php 
+<?php snippet('header');
   $payment = null;
+
+  if (isset($_POST['payment_id'])) {
+      $payment = 'success';
+  } else {
+      $payment = 'failed';
+  }
+
   if($payment == 'success'): 
       $title = $page->success_subtitle()->kirbyText();
       $body = $page->success_body_text()->kirbyText();
@@ -19,7 +24,11 @@
     <h2 class="screen-title large-text"><?= $title;?></h2>
     <div class="answers">
       <p>Your purchase number is:</p>
-      <p id="payment-number" class="xl-text">000000</p>
+      <p id="payment-number" class="xl-text">
+      <?php if (isset($_POST['id'])) {
+          echo filter_input(INPUT_POST, "id");
+      } ?>
+      </p>
     </div>
     <div class="answers">
       <?= $body;?>

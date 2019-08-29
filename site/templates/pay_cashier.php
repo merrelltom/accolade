@@ -24,7 +24,7 @@
       <h3>Timed Out</h3>
       <p>Do you wish to continue?</p>
       <div class="button-group">
-        <a class="button continue">Continue</a><a class="button restart">Restart</a>
+        <a class="button continue">Continue</a><a href="<?= $site->url();?>" id="restart" class="button restart">Restart</a>
       </div>
     </div>
   </div>

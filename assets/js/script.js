@@ -210,10 +210,13 @@ $(document).ready(function() {
 
 	$(window).on('click tapstart scroll', _.throttle(function(){prevTime = 0;}, 200));
 
+	if($('#online-payment-screen').length){
+		started = 1;
+	}
 
 	function timer(){
 		var currentTime = new Date().getTime();
-		// console.log(currentTime, prevTime);
+		console.log(prevTime - currentTime );
 		if (prevTime == 0){
 				prevTime = new Date().getTime();
 			}
@@ -227,7 +230,8 @@ $(document).ready(function() {
 	}
 
 	function restart(){
-		location.reload();
+		var url = $('#restart').attr('href');
+		window.location.replace(url);
 	}
 
 	function continueSesh(){

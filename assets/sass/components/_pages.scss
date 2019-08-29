@@ -87,13 +87,13 @@ a.button{
     text-decoration: none;
 }
 
-.next{
+.next, .right{
     border-top:2px solid black;
     float:right;
     border-left: 2px solid black;
 }
 
-.prev{
+.prev, .left{
     border-top:2px solid black;
     float: left;
 }
@@ -178,5 +178,11 @@ PAYMENT FORM
     font-style: normal;
     font-weight: 400;
     float:right;
+}
+
+.error-message{
+    margin-top: 10px;
+    font-size: 14px;
+    color: tomato;
 }
 

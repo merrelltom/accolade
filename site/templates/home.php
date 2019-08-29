@@ -369,8 +369,8 @@
         
         <div class="buttons">
           <form id="payment_submit" action=''method='post'>
-          <a data-href="<?= $site->children()->find('pay-cashier')->url(); ?>" class="button pay_cashier" id="pay_cashier">Pay at Cashier</a>
-          <a data-href="<?= $site->children()->find('online-payment-screen')->url(); ?>" class="button pay_online" id="pay_online">Pay Online</a>
+          <a data-href="<?= $site->children()->find('pay-cashier')->url(); ?>" class="button left pay_cashier" id="pay_cashier">Pay at Cashier</a>
+          <a data-href="<?= $site->children()->find('online-payment-screen')->url(); ?>" class="button right pay_online" id="pay_online">Pay Online</a>
           <input type="hidden" name="trophy-size">
           <input type="hidden" name="final-price">
           </form>
@@ -387,7 +387,7 @@
       <h3>Timed Out</h3>
       <p>Do you wish to continue?</p>
       <div class="button-group">
-        <a class="button continue">Continue</a><a class="button restart">Restart</a>
+        <a class="button continue">Continue</a><a href="<?= $site->url();?>" id="restart" class="button restart">Restart</a>
       </div>
     </div>
   </div>

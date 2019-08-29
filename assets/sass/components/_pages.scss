@@ -158,4 +158,25 @@ a.button{
 }
 
 
+/*  
+================================================================
+PAYMENT FORM
+================================================================  
+*/
+
+.card-wrapper{
+    border:1px solid black;
+    padding:20px 15px 20px;
+}
+
+.payment-submit-button{
+    background:black;
+    color:white;
+    margin-top:20px;
+    padding:14px 15px 10px;
+    font-family: 'typ';
+    font-style: normal;
+    font-weight: 400;
+    float:right;
+}
 

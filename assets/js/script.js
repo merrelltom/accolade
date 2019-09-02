@@ -21,7 +21,7 @@ var variance  = [];
 function gen_result(b, size, s) {
     v = variance[size];
     m = mod[size];
-    rand_b = (Math.random() * (v * 2)) - v + b;
+    rand_b = ((Math.random() * (v * 2)) - v) + parseFloat(b);
     console.log("New baseline = £" + rand_b);
     if (s <= r[0]) {
         p = rand_b * Math.pow(m[0], s - r[0]) * Math.pow(m[1], r[0]);

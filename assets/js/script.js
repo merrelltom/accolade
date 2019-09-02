@@ -6,23 +6,53 @@ var score = 0;
 var modifier = 1;
 var question_vals = {};
 var price = 0;
+var size = 'medium';
 
 var prevTime = 0;
 var t;
 var started;
 
-function gen_result(p,m,s) {
-    var n = Math.pow(1 + m/100, (0 - s));
-    return (p * n).toFixed(2);
+var grad = [];
+var mod = [];
+var r = [];
+var variance  = [];
+
+
+function gen_result(b, size, s) {
+    v = variance[size];
+    m = mod[size];
+    rand_b = (Math.random() * (v * 2)) - v + b;
+    console.log("New baseline = £" + rand_b);
+    if (s <= r[0]) {
+        p = rand_b * Math.pow(m[0], s - r[0]) * Math.pow(m[1], r[0]);
+    } else if (s > r[0] && s <= 0) {
+        p = rand_b * Math.pow(m[1], s);
+    } else if (s > 0 && s <= r[1]) {
+        p = rand_b * Math.pow(m[2], s);
+    } else if (s > r[1]) {
+        p = rand_b * Math.pow(m[3], s - r[1]) * Math.pow(m[3], r[1]);
+    }
+    
+    return p;
  }
 
 $(document).ready(function() {
 
-	modifier = tm_body.attr('data-modifier');
 	largePrice = tm_body.attr('data-large');
 	mediumPrice = tm_body.attr('data-medium');
 	smallPrice = tm_body.attr('data-small');
-
+        variance = {'small': tm_body.attr('data-s-mod'),'medium': tm_body.attr('data-m-mod'), 'large': tm_body.attr('data-l-mod')};
+        r = [tm_body.attr('data-range-low'), tm_body.attr('data-range-high')];
+        grad["small"] = [tm_body.attr('data-s-grad1'), tm_body.attr('data-s-grad2'), tm_body.attr('data-s-grad3'), tm_body.attr('data-s-grad4')];
+        grad["medium"] = [tm_body.attr('data-m-grad1'), tm_body.attr('data-m-grad2'), tm_body.attr('data-m-grad3'), tm_body.attr('data-m-grad4')];
+        grad["large"] = [tm_body.attr('data-l-grad1'), tm_body.attr('data-l-grad2'), tm_body.attr('data-l-grad3'), tm_body.attr('data-l-grad4')];
+        Object.keys(grad).forEach(function(key){
+            mod[key] = [];
+            for(let i = 0; i < 4; i++){
+                mod[key].push(1 + grad[key][i] / 100);
+                    }
+        });
+        
 	/*  
 	================================================================
 	NEXT BUTTONS WITH BUILT IN VALIDATION
@@ -53,14 +83,17 @@ $(document).ready(function() {
 			}else{
 				if(parent.find('input:checked').val() == 'small'){
 					price = smallPrice;
+                                        size = parent.find('input:checked').val();
 					$("#trophy-results-small").prop("checked", true);
 				}
 				if(parent.find('input:checked').val() == 'medium'){
 					price = mediumPrice;
+                                        size = parent.find('input:checked').val();
 					$("#trophy-results-medium").prop("checked", true);
 				}
 				if(parent.find('input:checked').val() == 'large'){
 					price = largePrice;
+                                        size = parent.find('input:checked').val();
 					$("#trophy-results-large").prop("checked", true);
 				}
                 $('input[name="trophy-size"]').val(parent.find('input:checked').val());
@@ -100,7 +133,7 @@ $(document).ready(function() {
                     running_total += parseInt($(this).val());
                 }
             });
-            document.getElementById("total-bar").innerHTML = "Running total:" + running_total + ", price: £" + gen_result(price, modifier, running_total);
+            document.getElementById("total-bar").innerHTML = "Running total:" + running_total + ", price: £" + gen_result(price, size, running_total);
 		}
 
 	});
@@ -137,7 +170,7 @@ $(document).ready(function() {
                 $("#results-list").append("<li>SCORE: " + score + "</li>");
                 
 
-                var result = gen_result(price, modifier, score);
+                var result = gen_result(price, size, score);
                 $('input[name="final-price"]').val(result);
                 
                 $("#results-list").append("<li>FUNCTION: "+price+" *(1 + "+modifier+"/100) ^ "+score+"  =  £"+result+"</li>");
@@ -207,14 +240,17 @@ $(document).ready(function() {
 	tm_body.on('change', 'input[type=radio][name=trophy-results]', function(){
 		if($(this).val() == 'small'){
 			price = smallPrice;
+                        size = $(this).val();
 		}
 		if($(this).val() == 'medium'){
 			price = mediumPrice;
+                        size = $(this).val();
 		}
 		if($(this).val() == 'large'){
 			price = largePrice;
+                        size = $(this).val();
 		}
-		var result = gen_result(price, modifier, score);
+		var result = gen_result(price, size, score);
 		$("#results-price").html("£"+result);
 	});
         

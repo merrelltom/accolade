@@ -33,7 +33,7 @@ function gen_result(b, size, s) {
         p = rand_b * Math.pow(m[3], s - r[1]) * Math.pow(m[3], r[1]);
     }
     
-    return p;
+    return p.toFixed(2);
  }
 
 $(document).ready(function() {

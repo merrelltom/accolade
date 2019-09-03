@@ -259,6 +259,33 @@
     endif;
   ?>
 
+  <?php //// Additional ////
+    $screen = $page->children()->find('screen-16-Additional'); 
+    if($screen):
+      $questions = $screen->children()->shuffle()->limit(1);
+      if($questions){
+        foreach ($questions as $question):?>
+          <section id="<?=$screen->slug();?>" class="screen <?=$screen->slug();?>">
+            <div class="screen-content">
+            
+              <?php 
+                  $question_type = 'simple';
+              ?>
+                <h2 class="screen-title large-text"><?= $question->title();?></h2>
+                  <?php include('simple-question.php');?>
+            </div>
+            <div class="buttons">
+              <a class="prev button">Previous</a>
+              <a class="next button submit">Submit Answers</a>
+            </div>
+
+          </section>
+
+        <?php endforeach;
+      }
+    endif;
+  ?> 
+
   <?php //// Financial Screen ////
     $screen = $page->children()->find('screen-15-Optional-Finance-Economic-Capital'); 
     if($screen):?>
@@ -297,32 +324,7 @@
           </section>
   <?php endif;?>
 
-  <?php //// Additional ////
-    $screen = $page->children()->find('screen-16-Additional'); 
-    if($screen):
-      $questions = $screen->children()->shuffle()->limit(1);
-      if($questions){
-        foreach ($questions as $question):?>
-          <section id="<?=$screen->slug();?>" class="screen <?=$screen->slug();?>">
-            <div class="screen-content">
-            
-              <?php 
-                  $question_type = 'simple';
-              ?>
-                <h2 class="screen-title large-text"><?= $question->title();?></h2>
-                  <?php include('simple-question.php');?>
-            </div>
-            <div class="buttons">
-              <a class="prev button">Previous</a>
-              <a class="next button submit">Submit Answers</a>
-            </div>
 
-          </section>
-
-        <?php endforeach;
-      }
-    endif;
-  ?> 
 
 </form>
 

@@ -276,7 +276,7 @@
             </div>
             <div class="buttons">
               <a class="prev button">Previous</a>
-              <a class="next button submit">Submit Answers</a>
+              <a class="next button">Next</a>
             </div>
 
           </section>
@@ -318,7 +318,7 @@
             </div>
             <div class="buttons">
               <a class="prev button">Previous</a>
-              <a class="next button">Next</a>
+              <a class="next button submit">Submit Answers</a>
             </div>
 
           </section>

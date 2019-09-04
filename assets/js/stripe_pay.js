@@ -1,4 +1,5 @@
-var stripe = Stripe('pk_test_Zko2pCiERVKRRHiD69eTsZ2z00MuTeMrFi');
+//var stripe = Stripe('pk_test_Zko2pCiERVKRRHiD69eTsZ2z00MuTeMrFi');
+var stripe = Stripe('pk_live_1BFkrKAfN882zpq3dKttfb0i00iLxzent7');
 
 var elements = stripe.elements();
 var cardElement = elements.create('card');

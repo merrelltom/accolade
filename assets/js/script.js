@@ -18,7 +18,8 @@ var r = [];
 var variance  = [];
 
 
-function gen_result(b, size, s) {
+function gen_result(b, size, score) {
+    s = 0 - score;
     v = variance[size];
     m = mod[size];
     rand_b = ((Math.random() * (v * 2)) - v) + parseFloat(b);

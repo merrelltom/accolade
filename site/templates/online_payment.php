@@ -4,9 +4,12 @@
         $price = filter_input(INPUT_POST, "final-price");
         $db_path = 'assets/db/simple_postcode.db';
         $db = new SQLite3($db_path, SQLITE3_OPEN_READWRITE);
-        $statement = $db->prepare("INSERT INTO results(price, trophy_size, paid) VALUES(:price, :size, 0)");
+        $statement = $db->prepare("INSERT INTO results(date_time, price, trophy_size, paid) VALUES(:timestamp, :price, :size, 0)");
         $statement->bindParam(':price', $price);
         $statement->bindParam(':size', $size);
+        date_default_timezone_set("Europe/London");
+        $timestamp = date("Y/m/d H:i");
+        $statement->bindParam(':timestamp', $timestamp);
         $statement->execute();
         $id = $db->lastInsertRowID();
 

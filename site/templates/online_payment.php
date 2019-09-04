@@ -18,9 +18,9 @@
         <section id="online-payment-screen" class="screen online-payment-screen selected">
               <div class="screen-content">
         <?php
-
+           require_once('assets/php/stripe_env.php');
 //        \Stripe\Stripe::setApiKey('sk_test_5uh8JHy65XEfqeZjrHmMqczn00Tmhto1Vt');
-        \Stripe\Stripe::setApiKey('sk_live_Acu7dH9iabBYWDt1o6dAYBhQ00MwK35zBC');
+        \Stripe\Stripe::setApiKey($sk);
         $intent = \Stripe\PaymentIntent::create([
             'amount' => (int)$price * 100,
             'currency' => 'gbp',

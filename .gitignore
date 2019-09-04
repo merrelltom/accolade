@@ -36,3 +36,5 @@ Icon
 # ---------------
 /site/config/.license
 /nbproject/private/
+
+/assets/php/stripe_env.php

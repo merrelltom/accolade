@@ -30,7 +30,14 @@ if (isset($_POST['id'])) {
     <h2 class="screen-title large-text">Results and Payments</h2>
     <ul>
         <li><span>Order Number</span><span>Date/Time</span><span>Size</span><span>Price</span><span>Paid?</span>
-        <?php while ($row = $res->fetchArray()) { ?>
+        <?php 
+        $results = array();
+        while ($row = $res->fetchArray()) { 
+            array_push($results, $row);
+        }
+        $results = array_reverse($results, true);
+        foreach ($results as $row) {
+        ?>
         <li>
             <span><?php echo $row['id']; ?></span><span><?php echo $row['date_time']; ?></span><span><?php echo $row['trophy_size']; ?></span><span>£<?php echo $row['price']; ?></span>
             <form method="post">

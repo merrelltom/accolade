@@ -47,20 +47,14 @@ if (isset($_POST['id'])) {
             <form method="post">
                 <li>
                     <label class="container">Paid
-                      <input name="<?php echo $row['id']; ?>" value="1" type="checkbox" <?php if ($row['paid'] == 1) { echo 'checked'; } ?>>
-                      <span class="checkmark"></span>
-                    </label>
-               </li>
-                <li>
-                    <label class="container">Not Paid
-                      <input name="<?php echo $row['id']; ?>" value="0" type="checkbox" <?php if ($row['paid'] == 0) { echo 'checked'; } ?>>
+                      <input name="paid" value="1" type="checkbox" <?php if ($row['paid'] == 1) { echo 'checked'; } ?>>
                       <span class="checkmark"></span>
                     </label>
                </li>
                <li>
                 <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                 <input type="submit" name="submit" value="Update"/>
-            </li>
+                </li>
             </form>
         </ul>
         <?php } ?>

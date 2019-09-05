@@ -22,6 +22,7 @@ form.addEventListener('submit', function(event) {
   ).then(function(result) {
     if (result.error) {
         console.log(result);
+        $("[role=alert]").html("<h3>" + result.error.message + "</h3>");
       // Display error.message in your UI.
     } else {
         console.log(result);

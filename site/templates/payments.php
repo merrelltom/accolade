@@ -28,8 +28,7 @@ if (isset($_POST['id'])) {
         }
     ?>
     <h2 class="screen-title large-text">Results and Payments</h2>
-    <ul>
-        <li><span>Order Number</span><span>Date/Time</span><span>Size</span><span>Price</span><span>Paid?</span>
+    
         <?php 
         $results = array();
         while ($row = $res->fetchArray()) { 
@@ -38,14 +37,33 @@ if (isset($_POST['id'])) {
         $results = array_reverse($results, true);
         foreach ($results as $row) {
         ?>
-        <li>
-            <span><?php echo $row['id']; ?></span><span><?php echo $row['date_time']; ?></span><span><?php echo $row['trophy_size']; ?></span><span>£<?php echo $row['price']; ?></span>
+        <ul class="order">
+            <li>Order Number: <?php echo $row['id']; ?><br></li>
+            <li>
+                <span>Date: <?php echo $row['date_time']; ?></span><br>
+                <span>Size: <?php echo $row['trophy_size']; ?></span><br>
+                <span>Price: £<?php echo $row['price']; ?></span><br>
+            </li>
             <form method="post">
-                <input type="hidden" name="id" value="<?php echo $row['id']; ?>"><input type="checkbox" name="paid" value="1" <?php if ($row['paid'] == 1) { echo 'checked'; } ?>><input type="submit" name="submit" value="Update" />
+                <li>
+                    <label class="container">Paid
+                      <input name="<?php echo $row['id']; ?>" value="1" type="checkbox" <?php if ($row['paid'] == 1) { echo 'checked'; } ?>>
+                      <span class="checkmark"></span>
+                    </label>
+               </li>
+                <li>
+                    <label class="container">Not Paid
+                      <input name="<?php echo $row['id']; ?>" value="0" type="checkbox" <?php if ($row['paid'] == 0) { echo 'checked'; } ?>>
+                      <span class="checkmark"></span>
+                    </label>
+               </li>
+               <li>
+                <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+                <input type="submit" name="submit" value="Update"/>
+            </li>
             </form>
-        </li>
+        </ul>
         <?php } ?>
-    </ul>
   </div>
 </section>
 

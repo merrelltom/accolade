@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 <div id="total-bar" style="display:none;position: fixed; top:0; left:0; height:15px; padding: 0 5px 0; background:black; text-align: center; color: white; line-height: 15px; font-size: 10px;">Running total:0, price: £0.00</div>
-<form method="get" name="accolade-pricing-form" id="accolade-pricing-form" action=" ">   
+<form method="get" name="accolade-pricing-form" id="accolade-pricing-form" onsubmit="return false;" action=" ">   
   
   <?php //// Start Screen //// 
     $screen = $page->children()->find('start-screen'); 
@@ -161,9 +161,9 @@
             <div class="screen-content">
             
               <?php 
-                  $question_type = 'simple';
+                  $question_type = 'complex';
               ?>
-                <h2 class="screen-title large-text"><?= $question->title();?></h2>
+                <h2 class="screen-title large-text"><?= $screen->subtitle();?></h2>
                   <?php include('simple-question.php');?>
             </div>
             <div class="buttons">
@@ -188,9 +188,9 @@
             <div class="screen-content">
             
               <?php 
-                  $question_type = 'simple';
+                  $question_type = 'complex';
               ?>
-                <h2 class="screen-title large-text"><?= $question->title();?></h2>
+                <h2 class="screen-title large-text"><?= $screen->subtitle();?></h2>
                   <?php include('simple-question.php');?>
             </div>
             <div class="buttons">
@@ -344,19 +344,19 @@
             <br><br>
             <ul class=" ">
                   <li class="answer">
-                <label class="container">Small Trophy    <input id="trophy-results-small" name="trophy-results" value="small" type="radio">
+                <label class="container">Small Trophy    <input id="trophy-results-small" name="trophy-results" value="small" type="radio" disabled>
                   <span class="checkmark"></span>
                 </label>
               </li> 
 
                 <li class="answer">
-                <label class="container">Medium Trophy     <input id="trophy-results-medium" name="trophy-results" value="medium" type="radio">
+                <label class="container">Medium Trophy     <input id="trophy-results-medium" name="trophy-results" value="medium" type="radio" disabled>
                   <span class="checkmark"></span>
                 </label>
               </li> 
 
                 <li class="answer">
-                <label class="container">Large Trophy      <input id="trophy-results-large" name="trophy-results" value="large" type="radio">
+                <label class="container">Large Trophy      <input id="trophy-results-large" name="trophy-results" value="large" type="radio" disabled>
                   <span class="checkmark"></span>
                 </label>
               </li> 

@@ -11,6 +11,9 @@ var size = 'medium';
 var prevTime = 0;
 var t;
 var started;
+var timeOutTime = 60000;
+var restartTime = 90000;
+var complete = false;
 
 var grad = [];
 var mod = [];
@@ -158,6 +161,7 @@ $(document).ready(function() {
 
 
 	function calculatePrice(){
+		complete = true;
 		$('input:checked').each(function(){
             if ( $.isNumeric($(this).val()) ) {
                 score += parseInt($(this).val());
@@ -283,8 +287,10 @@ $(document).ready(function() {
 
 	$(window).on('click tapstart scroll', _.throttle(function(){prevTime = 0;}, 200));
 
-	if($('#online-payment-screen').length){
+	if($('#online-payment-screen').length || complete == true){
 		started = 1;
+		timeOutTime = 90000;
+		restartTime = 120000;
 	}
 
 	function timer(){
@@ -293,10 +299,10 @@ $(document).ready(function() {
 		if (prevTime == 0){
 				prevTime = new Date().getTime();
 			}
-		if(currentTime - prevTime > 60000 && started == 1){
+		if(currentTime - prevTime > timeOutTime && started == 1){
 			tm_body.addClass('show-restart');
 		}
-		if(currentTime - prevTime > 90000 && started == 1){
+		if(currentTime - prevTime > restartTime && started == 1){
 			restart();
 		}
 		t = setTimeout(function(){ timer() }, 1000);

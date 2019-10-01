@@ -293,6 +293,11 @@ $(document).ready(function() {
 		restartTime = 120000;
 	}
 
+	if($('#payment-form').length){
+		timeOutTime = 3000000;
+		restartTime = 3000000;
+	}
+
 	function timer(){
 		var currentTime = new Date().getTime();
 		// console.log(prevTime - currentTime );
